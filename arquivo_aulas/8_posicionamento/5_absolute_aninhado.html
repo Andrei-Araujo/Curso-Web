@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>HTML 5 – A Nova Onda</title>
+<style type="text/css">
+div{
+	border: 1px solid black;	/* sem a borda, a margem dos elementos vaza alem do background color */
+	width: 300px;
+	height: 300px;
+} 
+
+#um{
+	background-color: red;
+	position:static;
+	/* 
+
+	*/
+
+	top:50px;
+	left:50px;
+}
+#dois{
+	background-color: green;
+	position:static;
+}
+#tres{
+	background-color: aqua;
+	position:static;
+}
+#quatro{
+	background-color: grey;
+    position:relative;
+    
+}
+#cinco{
+	background-color: red;
+    position:absolute;
+    /* 
+    Para que as coordenadas do position absolute sejam contadas a partir do zero do parent dele 
+        O cinco estaria contando a partir da coordenada zero do quatro
+        - O pai (no caso, quatro) nao pode ser static
+            + tem que ser relative, absolute ou fixed
+            + se colocar static, vai pegar do zero da pagina (o parent do quatro)
+
+    Para deixar aninhado, o parent nao pode ser static
+        a box que vai ficar dentro pode ser qualquer tipo de position
+    */
+    
+    top:100px;
+    left: 150px;
+}
+#seis{
+	background-color: green;
+	position:static;
+}
+#sete{
+	background-color: aqua;
+	position:static;
+}
+#oito{
+	background-color: grey;
+	position:static;
+}
+</style>
+</head>
+<body>
+
+<div id="um">
+	<h1>um</h1>
+</div>
+
+<div id="dois">
+	<h1>dois</h1>
+</div>
+
+<div id="tres">
+	<h1>tres</h1>
+</div>
+
+<div id="quatro">
+    <h1>quatro</h1>
+    <div id="cinco">
+        <h1>cinco</h1>
+    </div>
+</div>
+
+
+
+<div id="seis">
+	<h1>seis</h1>
+</div>
+
+<div id="sete">
+	<h1>sete</h1>
+</div>
+
+<div id="oito">
+	<h1>oito</h1>
+</div>
+ </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script src="jquery-3.1.1.js"></script>
+   <script>
+    //$(document).ready();
+    //$(document).ready(function(){});
+    $(document).ready(function(){
+      $('#series').on('click','li',function(){
+          var info = $(this).text();
+           alert(info);
+      });
+       $('#aperte').click(function(){
+           let texto = $('#entrada').val();
+           $('<li>').text(texto).css('color','red').css('background-color','yellow').appendTo('#series').list;
+            $('#entrada').val('');
+       });
+    });
+</script>
+</head>
+<body>
+    <ol id="series">
+        <li>La casa de Papel</li>
+        <li>Merli</li>
+        <li>Oitava Vitima</li>
+        <li>Lupin</li>
+    </ol>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo">
+        <input type="button" id="aperte" value="Click Aqui!!!!!">
+    </p>
+    <p id="veja">Bela Recatada e do Lar</p>
+    <p id="escuta">Londong Calling</p>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* 
+       
+       */
+        function Arquivos(nome,t,ti,l){
+            this.nome = nome            // é uma forma de criar uma classe por meio de uma funca, ao inves de utilizar o constructor; nao é o ideal, mas pode aparecer por ai
+            this.tamanho = t
+            this.tipo = ti
+            this.local = l
+            alert('oi'+ this.nome + this.tipo)
+        }
+
+        let produtos = new Arquivos('prod.txt',256,'texto','c:')  // cria variavel do tipo produtos na memoria; roda o construtor; pro construtor, sao passadas as 4 informacoes para gerar as variaveis this.nome, this.tamanho, this.tipo, this.local
+        let clientes = new Arquivos('cli.txt',500,'xls','d:')
+
+        produtos.tamanho = 555
+        alert(produtos.tamanho)
+        // alert(produtos['tamanho']) ninguem usa dessa maneira mas funciona
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

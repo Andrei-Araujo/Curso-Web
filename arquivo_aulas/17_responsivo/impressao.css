@@ -1,0 +1,3 @@
+#botoes, img{
+    display: none; /* assim, na hora do print, quem for button ou imagem nao aparece */
+}

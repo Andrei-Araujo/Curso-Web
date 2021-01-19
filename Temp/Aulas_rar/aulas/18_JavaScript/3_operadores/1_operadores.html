@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //oprador de atribuião
+        let num = 51;//num recebe 51 ou 51 é atribuido a num
+        console.log(num);
+        num = num + 9;//acumular
+        console.log(num);//60
+        num++;//num = num +1 => 61 => incremento
+        console.log(num);//61
+        num--; // num = num -1 // decremento
+        console.log(num);//60
+
+        nome = "Eduardo ";
+        console.log(nome);
+        nome = nome + "Pretel ";
+        console.log(nome);
+
+        /////////////////////////////////////////////////////////
+        //operadores aritimeticos
+        /*
+            + adição
+            - subtração
+            * multiplicação
+            / divisao
+            % resto da divisao
+        */
+        console.log(5+3);
+        console.log(5-3);
+        console.log(5*3);
+        console.log(5/3); //1.6666666667
+
+        console.log(parseInt(5/3));
+        console.log(5%3); 
+        
+        //operador literal - concatenação
+         console.log(5+3);
+         console.log("5"+"3");
+         console.log("5"+3);
+        console.log(5+"3");
+        console.log(5+parseFloat("3"));
+
+        /////////////////////////////////////////////////////////////
+        /*
+        Operadores de comparação 
+        Compara 2 valores e retorna true ou false
+        == igualdade - verifica o valor mas nao verifica o tipo
+        === identicos - verifica valor e tipo
+        */
+        console.log('igualdade');//true
+       console.log(5 == 5);//true
+       console.log(5 == "5");//true
+       console.log(5 === "5");//false
+       //diferente - <> nao existe - não é aceito
+       // != não igual - ! é o operador de negaçao
+       console.log('diferente');
+       console.log(5 != 5);//false
+       console.log(5 != "5");//false
+       console.log(5 !== "5");//true
+
+       //operadores logicos
+       //and => && => todas as comparaçoes devem retornar verdadeira
+       console.log('logicos and');
+       console.log(5 == 5  && 5 == "5" && 5 !== "5")
+        //or => || => basta apenas uma das comparaçoes verdadeira
+        console.log('logicos or');
+       console.log(5 == 5  || 5 == "3" || 5 === "5")
+
+       //operado TERNARIO
+       console.log('Ternario')
+       console.log(5 == 5 ? "Verdade!!!!!!":"Mentira!!!!!");
+       console.log(5 != 5 ? "Verdade!!!!!!":"Mentira!!!!!");
+
+       console.log( (5 != 5) ? ("Verdade!!!!!!") : ("Mentira!!!!!") );
+
+      let retorno =  (5 != 5) ? ("yesss!!!!!!") : ("Noooo!!!!!") ;
+       console.log(retorno);
+
+       /*
+       let anonima = (5 != 5) ? ( ()=>{alert('Simmmm')})  : ( eval(()=>{'nooooo'}) ) ;
+       anonima();
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

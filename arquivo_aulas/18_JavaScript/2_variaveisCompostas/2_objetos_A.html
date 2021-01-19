@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* 
+       var local    // escopo global
+       class descreve a variavel => a planta da casa
+       class arquivos
+       {
+           var nome
+           var tamanho
+           var tipo
+           var local // em que o arquivo está; escopo da classe
+
+           function abrir(){
+               local    //escopo local da funcao
+           }
+           function ler(){
+               
+           }
+       }
+
+       let produtos = new Arquivos  // new é o  construtor de objetos
+       let clientes = new Arquivos; //estrutura de clientes tambem segue a estrutura da classe arquivos
+       produtos.nome = "prod.txt"
+       produtos.tamanho = 355mb
+       */
+      class Arquivos{
+          //nome
+          constructor(nome,t,ti,l){    // é um metodo que roda logo qdo a class é instanciada
+            this.nome = nome            // usa this para se referir a uma variavel que esteja fora do constructor (na class) (é tipo self em python; em js, self se refere a window (é diferente))
+            this.tamanho = t
+            this.tipo = ti
+            this.local = l
+            alert('oi'+ this.nome + this.tipo)
+          }
+          valida(){                     // por estar dentro de classe, nao se usa a palavra function para criar uma função (o resto fica igual)
+              alert('eu sou a valida()')
+          }
+      }
+      let produtos = new Arquivos('prod.txt',256,'texto','c:')  // cria variavel do tipo produtos na memoria; roda o construtor; pro construtor, sao passadas as 4 informacoes para gerar as variaveis this.nome, this.tamanho, this.tipo, this.local
+      let clientes = new Arquivos('cli.txt',500,'xls','d:')
+      produtos.valida()
+      produtos.tamanho = 555
+      alert(produtos.tamanho)
+      // alert(produtos['tamanho']) ninguem usa dessa maneira mas funciona
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

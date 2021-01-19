@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+        <!-- //window.onload = function(){
+        /* onload = ()=>{
+            document.querySelector('#aperte').addEventListener('click',()=>{
+                var info = document.querySelector('#entrada').value */
+                /* 
+                document.querySelector("#escuta").innerHTML = info
+                document.querySelector("#escuta").style.color = red
+                document.querySelector("#escuta").style.backgroundColor = 'lightgrey'
+                 */
+                /* var escuta = document.querySelector("#escuta")
+                escuta.innerHTML = info
+                escuta.style.color = 'red'
+                escuta.style.backgroundColor = 'lightgrey'
+            })
+        } */ -->
+</head>
+<body>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo">
+        <input type="button" id="aperte" value="Click Aqui!">
+    </p>
+    <p id="veja">Bela Recatada e do Lar</p>
+    <p id="escuta">London Calling</p>
+    <script>
+            document.querySelector('#aperte').addEventListener('click',()=>{
+                var info = document.querySelector('#entrada').value
+                /* 
+                document.querySelector("#escuta").innerHTML = info
+                document.querySelector("#escuta").style.color = red
+                document.querySelector("#escuta").style.backgroundColor = 'lightgrey'
+                 */
+                var escuta = document.querySelector("#escuta")
+                escuta.innerHTML = info
+                escuta.style.color = 'red'
+                escuta.style.backgroundColor = 'lightgrey'
+            })
+            /* $('#aperte').click() */    // selecione quem se chama aperte e, quando clicar,
+            /* $('#aperte').click(function(){}) */    // selecione quem se chama aperte e, quando clicar, execute a function anonima
+            $('#aperte').click(()=>{
+                let info = $('#entrada').val()  // anteriormente, era .value ; agora, é uma funcao .val()
+                $('#escuta').text('Heroes')     // manda o conteudo Heroes para o text da variavel escuta
+            })
+    </script>
+</body>
+</html>

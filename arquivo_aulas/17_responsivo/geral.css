@@ -1,0 +1,7 @@
+label{
+    display: inline-block;  /* deixa inline, mas com propriedades de block (como width) */
+    width:  130px;
+}
+fieldset{
+    border-radius: 15px;
+}

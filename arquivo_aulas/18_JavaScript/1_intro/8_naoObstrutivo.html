@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formata{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <script>
+        function primeira()
+        {
+            var nome = prompt('Entre com seu nome');
+            alert("O nome é: "+nome);
+            console.log(nome);
+        }
+    //Uncaught TypeError: Cannot read property 'info' of undefined
+    //essa instrução funcionara somente após o objeto existir
+    //coloca-la apos o HTML
+
+    
+    
+    window.onload = function(){
+        // document.getElementById('um').onblclick = function(){}
+        document.getElementById('um').addEventListener('click', primeira)   // so serve para funcao sem parametro de entrada; se precisar passar valor, n rola desse jeito pois o programa vai tentar executar na hora
+
+        document.getElementById('dois').addEventListener('dblclick', funtion(){ // funcao anonima que chama uma outra funcao
+            primeira()})
+        document.getElementById('tres').addEventListener('onmouseover', function(){ // ou usa uma funcao anonima com codigo exclusivo (nao chama outra funcao)
+            var nome = prompt('Entre com seu nome');
+            alert("O nome é: "+nome);
+            console.log(nome);
+        })
+        
+    }
+    
+    </script>
+</head>
+<body>
+<form name="frm" id="formulario">    
+    <input type="button" id="um" value="Click" onclick="primeira()">
+    <hr>
+    <input type="button" id="dois" value="DoubleClick" ondblclick="primeira()">
+    <hr>
+    <input type="button" id="tres" value="Mouse Over" onmouseover="">
+    <hr>
+    <input type="text" class="formata" id="quatro" name="info" value="oiiii">
+</form>
+</body>
+</html>

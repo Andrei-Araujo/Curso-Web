@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // operador de atribuicao
+        let num = 51    // num recebe 51, ou, 51 é atribuido  a num
+        console.log(num)
+        num = num + 9
+        console.log(num)
+        num++           // incremento
+        console.log(num)
+        num--
+        console.log(num)// decremento
+
+        nome = "Eduardo "
+        console.log(nome)
+        nome = nome + "Pretel"
+        console.log(nome)
+
+        ////////////////////////////////////////////
+        // operadores aritmeticos
+        /* 
+            +   adicao
+            -   subtraçao
+            *   multiplicação
+            /   divisão
+            %   resto da divisão
+        */
+        console.log((5+3)/2)
+        console.log(5/3)        //  1.666666
+
+
+        console.log(parseInt(5/3))  // 1 (a parte inteira da divisao)
+        console.log(5%3)            // 2 (resto da divisao)
+
+        //////////////////////////////////////////
+        // operadores literais
+        console.log("5"+"3")    // concatenacao ; 53
+        console.log(5+parseInt("3"))    // soma o numero 5 com o numero 3 (conversao do texto 3 para o numero equivalente)
+        // poderia usar o parseFloat, se quisesse tornar em numero float
+
+        /////////////////////////////////////////
+        // Operadores de comparacao
+        /* 
+        Compara 2 valores e retorna true or false
+            ==  igualdade - verifica o conteudo(valor), mas nao verifica o tipo
+            === identicos - verifica conteudo(valor) e tipo
+            !=  não igual - é o operador de negação
+
+        */
+        console.log(5==5)
+        console.log(5=="5 ")    // retorna true
+        console.log(5==="5")    // false
+        console.log(5!="5")     // false
+        console.log(5!=="5")    // true
+        
+        /////////////////////////////////////////
+        //operadores logicos
+        /*  
+        and => && => todas a scomparacoes devem retornar verdadeira
+            nao se usa a palavra and; usa-se && 
+        or => || => basta apenas umas das comparacoes ser verdadeira
+        */
+
+        console.log(5 ==5 && 5 == "5" && 5 === "5") // true true false, logo, o pacote deu false
+        console.log(5 ==5 || 5 == "5" || 5 === "5") //true false false, logo, true
+
+        // operador Ternario
+        /* 
+        A == B ? C:D
+            if A == B
+                return C
+            else
+                return D
+        */
+        console.log('Ternario')
+        console.log(5 == 5 ? "Verdadeiro!":"Mentira!")
+
+        console.log(5 != 5 ? ("Verdadeiro!"):("Mentira!") )
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

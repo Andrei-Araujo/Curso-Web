@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>HTML 5 – A Nova Onda</title>
+<style type="text/css">
+div{
+	border: 1px solid black;	/* sem a borda, a margem dos elementos vaza alem do background color */
+	width: 300px;
+	height: 300px;
+} 
+
+#um{
+	background-color: red;
+	position:static;
+	/* 
+    Para float, era necessario a caixa ter position:relative
+    Agora nao é mais necessario
+	Pode ser static
+	
+	Conforme haja elementos 
+	*/
+
+
+    float:right;
+    /* 
+
+     */
+}
+#dois{
+	background-color: green;
+    position:static;
+    
+	float:right;
+}
+#tres{
+	background-color: aqua;
+	float: right;
+}
+#quatro{
+	background-color: grey;
+	position:static;
+	/* clear:right; */	/* limpe a flutuacao */
+	clear:both;	/* meio que ele pula uma linha, para se posicionar abaixo dos elementos que deram float anteriormente */
+	/*
+	 clear limpa a flutuacao, e no caso faz pular a linha e ir para o extremo (da direita)
+			vai para o proximo lugar sem flutuacao
+	*/
+	float: right;	/* o cinco  sobe direto para a 1a linha, uma vez que nao demos clear nele */
+}
+#cinco{
+	background-color: red;
+	position:static;
+	float: right;
+}
+#seis{
+	background-color: green;
+	position:static;
+	float: right;
+}
+#sete{
+	background-color: aqua;
+	position:static;
+	clear: both;
+	float: right;
+}
+#oito{
+	background-color: grey;
+	position:static;
+}
+</style>
+</head>
+<body>
+
+<div id="um">
+	<h1>um</h1>
+</div>
+
+<div id="dois">
+	<h1>dois</h1>
+</div>
+
+<div id="tres">
+	<h1>tres</h1>
+</div>
+
+<div id="quatro">
+	<h1>quatro
+</h1>
+</div>
+
+<div id="cinco">
+	<h1>cinco</h1>
+</div>
+
+<div id="seis">
+	<h1>seis</h1>
+</div>
+
+<div id="sete">
+	<h1>sete</h1>
+</div>
+
+<div id="oito">
+	<h1>oito</h1>
+</div>
+ </body>
+</html>

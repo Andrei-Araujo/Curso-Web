@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /* 
+       Objeto JSON
+
+       */
+            let teatro = {
+                "ator":"Paulo Autran",
+                "atriz":"Tonia Carrero",
+                "peca":"Quem tem medo...",
+                "duracao":120,
+                "ingresso":true,
+                "valida":function(){
+                    alert('Eu valido '+ this.peca)
+                    return 3
+                }
+            }
+
+            document.write(teatro)
+            document.write("<br>")
+            document.write(teatro.ator)
+            document.write("<br>")
+            document.write(teatro.valida()) // com isso, executa a funcao dentro da variavel
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

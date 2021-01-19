@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    <hr>
+    <h3 class="formata">Eu sou o h3</h3>
+    
+    <script>
+        let caixaInputs = document.getElementsByTagName('input');//[object HTMLCollection]
+        alert(caixaInputs);
+        console.log(caixaInputs);
+        //pegar as informaçoes do segundo input
+        console.log(caixaInputs[1].type); 
+        console.log(caixaInputs[1].id);//dois
+        console.log(caixaInputs[1].className);//formata
+
+        //pegar as informaçoes do primeiro input
+        console.log(caixaInputs[0].type); 
+        console.log(caixaInputs[0].id);//um
+        console.log(caixaInputs[0].className);//formata
+        console.log(caixaInputs[0].style);//CSSDeclaration
+        console.log(caixaInputs[0].style.color);
+
+        //posso alterar o elemento HTML ou CSS alterando o conteudo da variavel
+
+        caixaInputs[1].style.backgroundColor="pink";
+        caixaInputs[1].style.fontSize="30px";
+
+        //H3 tem apenas 1 porem poderia ter mais do que um
+        //portanto utilizando o document.getElementsByTagName('h3'); retornara um array
+        //mesmo que tenha somente um indice
+        let cabeca3 = document.getElementsByTagName('h3');//[object HTMLCollection]
+        alert(cabeca3);
+        console.log(cabeca3);//4_AcessandoObjetosHtml.html:47 HTMLCollection [h3]
+        console.log(cabeca3[0].tagName);
+        console.log(cabeca3[0].innerText);
+        console.log(cabeca3[0].innerHTML);
+
+        //aletrando os conteudos
+        caixaInputs[0].value = "Annita"
+;       caixaInputs[1].value = "Pablo"
+
+        //cabeca3[0].innerText = "<em>Sexta-feira</em>"
+        cabeca3[0].innerHTML = "<em>Sexta-feira</em>"
+    </script>
+</body>
+</html>

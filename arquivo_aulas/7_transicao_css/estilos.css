@@ -1,0 +1,13 @@
+   /* especificidade media */
+p{
+    background-color: burlywood;
+    border-bottom: cornflowerblue solid 5px;
+}
+.formata{
+    background-color: chartreuse;
+    text-decoration: underline;
+}
+#unico{
+    background-color: black;
+    color: white;
+}

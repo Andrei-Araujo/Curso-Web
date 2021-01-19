@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        Simples
+        Strings => alfanumericas
+        Float, Integer => Numericas
+        Boolean => true ou False
+
+        Compostas
+        Arrays
+        Objetos
+
+        Não se declara variável em javascript
+            O tipo nao é da variavel (variavel nao é tipada)
+            O tipo é do dado (conteudo da variavel)
+        */
+        nome="Edu"; /* forma depreciada; nome recebe Edu, ou, Edu é atribuido à variavel nome */
+        window.alert(nome);    /* boxes JS; nao precisa escrever window */
+        nome=8;
+        window.alert(nome);
+        /* caindo em desuso: utilizar a palavra var (continua útil quando let nao é viável)*/
+        var idade = 60; /* 60 = numerico; "60" = string */
+        console.log(idade); /* console do browser */
+
+        /* forma que deve ser utilizada: iniciando a variavel com let */
+        let curso = "Javascript";
+        window.document.write("<h1>");  /* nao precisa escrever window */
+        document.write(curso);
+        document.write("</h1>");
+        document.write("<hr>");
+        
+    </script>
+</head>
+<body>
+    <p id="texto">0_Variaveis</p>
+
+    <script>    /* local correto do script: aqui mesmo, antes de fechar o body */
+       const escola = "Impacta";    /* conteúdo nao pode ser alterado */
+       alert(escola); 
+       window.document.getElementById('texto').innerText = escola;
+       window.document.getElementById('texto').style.color = "red";
+    </script>
+
+</body>
+</html>

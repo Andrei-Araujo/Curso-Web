@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var elementoHtml = document.getElementById('um');
+            //elementoHtml será um objeto criado a partir da "classe" object HTMLInputElement
+            //e estará relacionado ao elemento HTML, ou seja, a alteração feita na variavel tambem
+            //ocorrerá no elemento HTML
+           // alert(elementoHtml)
+            console.log(elementoHtml);
+            console.log(elementoHtml.tagName);
+            console.log(elementoHtml.className);
+            console.log(elementoHtml.id);
+            console.log(elementoHtml.type);
+            console.log(elementoHtml.style);
+            //alert(elementoHtml.style);
+            console.log(elementoHtml.style.color);
+            console.log(elementoHtml.style.fontFamily);
+
+            elementoHtml.value="Epa!!!!!!!";//ALTERA o elemento HTML pois é uma variavel OBJETO e está relacionada ao elemento HTML
+            //console.log(valor);
+            elementoHtml.type="text";
+            elementoHtml.style.color = "green";
+            elementoHtml.style.fontSize = "30px";
+            elementoHtml.style.fontFamily= "Impact";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nasc = new Date(1960,8,18,16,45)  // calendario vai do mes 0 ao mes 11
+        alert(nasc.getDay())    // retornou 1 como Monday, para getDay
+        var dia = nasc.getDay()
+        
+        switch(dia){
+            case 0:
+                var diaSemana = "Domingo"
+                break       // com esse break, ao encontrar a condicao da variavel, ja sai do switch (nao brecisa ler os outros casos)
+            case 1:
+                diaSemana = "Segunda-Feira"
+                break
+            case 2:
+                diaSemana = "Terça-Feira"
+                break
+            case 3:
+                diaSemana = "Quarta-Feira"
+                break
+            case 4:
+                diaSemana = "Quinta-Feira"
+                break
+            case 5:
+                diaSemana = "Sexta-Feira"
+                break
+            case 6:
+                diaSemana = "Sábado"
+                break
+            default:
+                diaSemana = "Valor Inválido"
+        }
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

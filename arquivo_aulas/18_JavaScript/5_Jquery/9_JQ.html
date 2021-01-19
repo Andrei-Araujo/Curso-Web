@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //animacoes
+            $('#veja').animate({"margin-left":"+=100"},3000)
+
+            $('#series').on('dblclick','li',function(){
+                //$(this).animate({"margin-left":"+=100"},3000).remove()
+                $(this).animate({"margin-left":"+=100"},3000,function(){     // depois que acabar a animacao, execute a funcao anonima (que no caso, vai remover o item da lista)
+                    $(this).remove()
+                })
+            })
+
+            /* $('#series').on('click','li',function(){
+                var info = $(this).text()
+                alert(info)
+            }) */
+            $('#aperte').click(function(){  
+                let texto = $('#entrada').val()
+                
+                $('<li>')   .text(texto)
+                            .css({  "color":"yellow",
+                                    "background-color":"red",
+                                    "font-family":"Arial",
+                                    "font-size": "20px",
+                                "border":"1px solid black"
+                                })
+                            .appendTo('#series')
+                            .list
+                            
+                $('#entrada').val('')
+
+                
+            })
+            
+        })  
+    </script>
+</head>
+<body>
+    <ol id="series">   
+        <li>La casa de Papel</li>
+        <li>Merli</li>
+        <li>Oitava Vitima</li>
+        <li>Lupin</li>
+    </ol>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo">
+        <input type="button" id="aperte" value="Click Aqui!">
+    </p>
+    <p id="veja">Bela Recatada e do Lar</p>
+    <p id="escuta">London Calling</p>
+    
+</body>
+</html>

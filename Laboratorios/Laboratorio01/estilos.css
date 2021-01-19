@@ -1,0 +1,62 @@
+fieldset{
+    width: 500px;
+    border-radius: 15px;
+}
+section{
+    float: left;
+    width: 100%;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.enunciado{
+    color: green;
+    margin: 0;
+    margin-right: 10px;
+    float: left;
+    clear: both;
+    min-width: 150px;
+}
+.dados{
+    color: blue;
+    margin: 0;
+    margin-bottom: 10px;
+    float: left;   
+}
+#secaoObj{
+    /* clear: both; */
+    width: 100%;
+    float: left;
+}
+#formacao h1{
+    margin:0;
+    margin-bottom: 5px;
+}
+.objEsquerda{
+    width: 150px;
+    float: left;
+    margin: 0;
+    font-size: 18px;
+}
+.objDireita{
+    float: left;
+    margin: 0;
+    font-size: 18px;
+}
+.objEmbaixo{
+    clear: both;
+    float: left;
+    margin: 0;
+    margin-left: 20px;
+    font-size: 15px;
+    font-style: italic;
+}
+#idioma h1{
+    margin-bottom: 15px;
+}
+#idioma li{
+    margin-left: 30px;
+    list-style: outside;
+}

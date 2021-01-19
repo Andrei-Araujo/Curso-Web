@@ -1,0 +1,123 @@
+/* 
+Mudar o Layout do site, de layout fixo para layout fluido
+    fixo =>     medidas fixas => px, cm, mm, pt...
+    fluido =>   medidas são em porcentagem
+
+    contexto => 768px tamanho do site dentro da resolucao escolhida
+    alvo => a resolução escolhida - 1680px (horizontalmente)
+
+    unidade de relatividade: contexto/alvo*100
+        768/1680*100 = 45.71428 (porcentagem do site, do body, em relacao a tela)
+
+        150/768*100 = 19.53125 (porcentagem de um dos componentes do site em relacao ao site completo)
+        618/768*100 = 80.46875
+
+        Para fonte, nao se usa porcentagem (%)
+            Usa-se a medida  em
+                1 em  = tamanho padrão da fonte do dispositivo
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana,Arial;
+    font-size: .7 em;
+    background-color: #CCC; /* RGB, ao inves de hexadecimalquando é par de letras iguais, pode colocar so uma delas */
+}
+
+#interface{
+    border: 1px solid black;
+    background-color: burlywood;
+    width: 45.71428%;
+    margin:auto;
+    position: relative; /* para o position do aside funcionar ocmo deveria */
+}
+
+header#cabecalho{
+    height: 80px;
+    background-image: url(images/topo_.jpg);    /* Ctrl+barra para aparecerem sugestoes de arquivos */
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav#menu{
+    width: 19.53125%;
+    height: 400px;
+    background-color: #000000;
+    float: left;
+}
+
+nav#menu ul li a{   /* nao precisa fazer o caminho completo */
+    margin: 1px;
+    padding: 5px;
+    border-left: 3px solid #FF0000;
+    border-bottom: 1px solid #CCCCCC;
+    display: block;
+    background-color: #000;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+    text-decoration: underline;
+    border-left: 3px solid #FFFFFF;
+    background-color: #CCC;
+    color: black;
+}
+
+section#principal{
+    background-color: #FFFFFF;
+    width: 80.46875%;
+    height: 400px;
+    float:right;
+    position: relative; /* para o position do aside funcionar como deveria */
+}
+
+section#principal aside{
+    background-color: #CCC;
+    width: 150px;
+    position: absolute; /* o position do parent dele tem que ser qqr coisa que nao seja static (default) */
+    top:0;
+    right:0;
+}
+
+section#principal aside a{
+    display: block;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #FFF #333 #333 #333;
+
+    font-size: 0.8em;   /* 80% da fonte padrao do dispositivo; para fonte, troca-se % por em */
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+section#principal aside a:hover{
+    text-decoration: underline;
+}
+
+footer#rodape{
+    background-color: #600;
+    color: #FFF;
+    text-align: center;
+    height: 50px;
+    width: 768px;
+    display: table-cell;    /* faz o objeto se comportar como uma celula de tabela (util para allign vertical) */
+    vertical-align: middle;
+}
+
+@media only screen and (max-width:800px){   /* para quando a tela tiver largura menor que 800 */
+    section#principal aside{
+        top:unset;
+        bottom:0;
+        right:unset;
+        left: 0;
+    }
+}

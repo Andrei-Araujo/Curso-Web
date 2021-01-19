@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       /*
+       //classe
+       */
+        function Arquivos(nome,t,ti,l){
+                this.nome = nome;
+                this.tamanho = t;
+                this.tipo = ti;
+                this.local=l;
+                alert('oi'+this.nome+this.tipo);
+        }
+      
+       let produtos = new Arquivos('prod.txt',256,'texto','c:');
+       let clientes = new Arquivos('cli.txt',500,'xls','d:');
+       
+       alert(produtos);
+       
+       alert(produtos.tamanho);
+       produtos.tamanho = 5974;
+       alert(produtos.tamanho);
+       alert(produtos['tamanho']);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

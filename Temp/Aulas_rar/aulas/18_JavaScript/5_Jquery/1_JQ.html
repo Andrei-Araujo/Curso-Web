@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+        //window.onload = function(){
+        onload = ()=>{  
+              document.querySelector('#aperte').addEventListener('click',()=>{
+                  var info = document.querySelector('#entrada').value;
+                  /*
+                  document.querySelector("#escuta").innerHTML = info;
+                  document.querySelector("#escuta").style.color = 'red';
+                  document.querySelector("#escuta").style.backgroundColor = 'lightgrey';
+                  */
+                 var escuta = document.querySelector("#escuta");
+                 escuta.innerHTML = info;
+                 escuta.style.color = 'red';
+                 escuta.style.backgroundColor = 'lightgrey';
+              });
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <input type="text" id="entrada" value="Pensamento Positivo">
+        <input type="button" id="aperte" value="Click Aqui!!!!!">
+    </p>
+    <p id="veja">Bela Recatada e do Lar</p>
+    <p id="escuta">Londong Calling</p>
+    
+</body>
+</html>

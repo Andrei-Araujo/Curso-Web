@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formata{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <script>
+        function primeira()
+        {
+            var nome = prompt('Entre com seu nome');
+            alert("O nome é: "+nome);
+            console.log(nome);
+        }
+    //Uncaught TypeError: Cannot read property 'info' of undefined
+    //essa instrução funcionara somente após o objeto existir
+    //coloca-la apos o HTML
+    //window.document.frm.info.value="Tchau7!!!!!";     
+    </script>
+</head>
+<body>
+<form name="frm" id="formulario">    
+    <input type="button" id="um" value="Click" onclick="primeira()">
+    <hr>
+    <input type="button" id="dois" value="DoubleClick" ondblclick="primeira()">
+    <hr>
+    <input type="button" id="tres" value="Mouse Over" onmouseover="">
+    <hr>
+    <input type="text" class="formata" id="quatro" name="info" value="oiiii">
+</form>
+</body>
+</html>
+<script>
+    //utiliza o atributo name (nao ideal)
+    /* window.document.frm.info.value="Tchau8!!!!!"; 
+    window.document.frm.info.type="password"; 
+    window.document.frm.info.id="dez"; */ 
+
+    // utiliza o atributo id (o ideal, pro caso de haver mudancas)
+    window.document.frm.info.value="Tchau8!!!!!";
+
+    let infoText = document.getElementById('quatro')
+
+    alert(infoText) // [object HTMLInputElement] <input id="quatro" type="text" name="info" value="oiiii">
+    console.log(infoText.type)  //text
+    console.log(infoText.id)    //quatro
+    console.log(infoText.name)  //info
+    console.log(infoText.value) //Tchau8!!!!
+    console.log(infoText.tagName)   //input
+    console.log(infoText.className) //formata
+
+    infoText.type="password"
+    console.log(infoText.type)  //password
+
+    console.log(infoText)
+</script>

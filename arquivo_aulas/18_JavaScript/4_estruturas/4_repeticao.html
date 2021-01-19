@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // nao se sabe quantas vezes o loop vai rodar
+
+        // enquanto verdadeiro, faça
+        var cont = 1
+        while(cont<=5){
+            document.write(cont+", ")
+            cont++
+        }
+        document.write("<hr>")
+        ///////////////////////////////////////////////////////////
+        // sabe-se quantas vezes o loop vai rodar
+
+        //para cont de 1 ate 5 passo 1 faca
+        for(conta = 1; conta <= 10; conta = conta+2){
+            document.write(conta+", ")
+        }
+        document.write("<hr>")
+        ///////////////////////////////////////////////////////////
+        //nao se sabe quantas vezes o loop vai rodar
+        //(faça) repita ate
+        //difetenca para o while => ao menos 1a vez o laço vai girar
+        var i=8
+        do{
+            document.write(i+", ")
+            i++
+        }while(i<=5)        // roda 1a vez, e so apos rodar ele faz a verificacao (pra ver se roda mais uma vez, ou nao)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

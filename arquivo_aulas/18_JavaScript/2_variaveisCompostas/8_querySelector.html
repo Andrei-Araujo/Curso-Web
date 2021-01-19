@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+
+    <script>
+        // retornando class
+        // let unico = document.getElementById('um')
+        let unico = document.querySelector('input') 
+        console.log(unico)
+        console.log(unico.tagName)
+        console.log(unico.className)
+        console.log(unico.value)
+        console.log(unico.style)
+        console.log(unico.style.fontFamily)
+
+        console.log('xxxxxxxxxxxxxxxxxxxxx')
+
+        // para retornar todos os objetos com a classe="formata" (e nao son o primeiro), utilizar o document.querySlectorALL
+        // similar ao document.getElementsByCLassName('formata') ; é mais uma diferença de sintaxe mesmo
+        let todos = document.querySelectorAll('input') 
+        console.log(todos)
+        console.log(todos[0].tagName)
+        console.log(todos[0].className)
+        console.log(todos[0].value)
+        console.log(todos[0].style)
+        console.log(todos[0].style.fontFamily)
+
+        console.log(todos[0].id)
+        console.log(todos[1].id)
+        console.log(todos[2].id)
+    </script>
+</body>
+</html>

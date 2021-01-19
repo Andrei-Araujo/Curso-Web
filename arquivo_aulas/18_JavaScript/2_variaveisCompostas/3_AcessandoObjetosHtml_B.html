@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        onload = function(){
+            var elementoHTML = document.getElementById('um')    // nesse caso, é como se fosse ponteiro; mexer nessa variavel vai gerar consequencias na origem (no objeto html orginal da pagina); isso ocorre por meio de API, fazendo mudança por referência
+            // elementoHTML será um objeto criado a partir da "classe" objecto HTMLInputElement e estará relacionado ao elemento HTML, ou seja, a alteracao feita na variavel tambem ocorrera no elemento html
+            console.log(elementoHTML)
+            elementoHTML.value="Epa"  // nao altera o elemento HTML original pois está mudando o valor dessa variavel auxiliar/ temporaria
+            console.log(elementoHTML)
+            console.log(elementoHTML.style.color)
+            elementoHTML.type = "text"  // com isso, da pra conerter um botao ja existente pra um texto
+            elementoHTML.style.fontSize = 30px
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+</body>
+</html>

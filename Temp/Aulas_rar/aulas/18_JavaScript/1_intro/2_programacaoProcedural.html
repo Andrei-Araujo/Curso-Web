@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formata{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <script>
+
+        function primeira(parametro){
+            var nome = window.prompt(parametro + 'Entre com seu nome: ');
+            window.alert(parametro + "O nome é "+nome);
+            console.log(parametro + nome);
+            window.document.write('<p class="formata">O nome é '+ parametro  + nome+"!!!</p>")
+        }
+        
+    </script>
+</head>
+<body>
+        <script>primeira('Pablo ')</script>
+    <hr>
+        <script>primeira('Anitta ')</script>
+    <hr>
+        <script>primeira('Criolo ')</script>
+    <hr>
+        <script>primeira('Gal ')</script>
+</body>
+</html>

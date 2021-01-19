@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Unordered list (lista nao ordenada) : os marcadores dos topicos sao pontos, e nao numeros (nao expressam ordem) -->
+    <ul>    <!-- o padrao é type="disk", pode ser omitido; especificados: square e circle -->
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <!-- marcadores nao devem ser configurados atraves do atributo type="" ; devem ser configurados a partir de CSS -->
+    <ul type="circle">    
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <ul type="square">    
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <hr />
+
+    <!-- Orded  List -->
+    <ol type="A" start=5>    <!-- type="1" é o padrão; pode usar start="5", para começar do 5 a lista; type="I" faz os índices ficarem em algarismos romanos (pode ser type="i" também; type="A" faz indices serem alfabéticos) -->
+        <li>Banana</li>
+        <li>Uva</li>
+        <li>Pera</li>
+        <li>Maçã</li>
+    </ol>
+
+    <hr />
+
+    <!-- Listas Aninhadas => Listas com sub listas -->
+
+    <ol>
+        <li>Honda
+            <ol type="A">       <!-- para os robos indexadores, é interessante mostrar que sao itens dentro de uma lista (e nao do jeito antigo, lista depois da lista anterior começar) -->
+                <li>CRV
+                    <ol>
+                        <li>Álcool</li>
+                        <li>Gasolina</li>
+                    </ol>
+                </li>
+                <li>HRV</li>
+                <li>WRV</li>
+                <li>FIT</li>
+            </ol>
+        </li>
+        <li>Fiat</li>
+        <li>Renault</li>
+        <li>Suzuki</li>
+    </ol>
+
+    <ul>
+        <li>Honda
+            <ul>       <!-- para os robos indexadores, é interessante mostrar que sao itens dentro de uma lista (e nao do jeito antigo, lista depois da lista anterior começar) -->
+                <li>CRV
+                    <ul>
+                        <li>Álcool</li>
+                        <li>Gasolina</li>
+                    </ul>
+                </li>
+                <li>HRV</li>
+                <li>WRV</li>
+                <li>FIT</li>
+            </ul>
+        </li>
+        <li>Fiat</li>
+        <li>Renault</li>
+        <li>Suzuki</li>
+    </ul>
+</body>
+</html>

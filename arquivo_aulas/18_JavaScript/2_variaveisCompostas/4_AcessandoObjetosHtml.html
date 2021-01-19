@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <h3>Paragrafo 3</h3>
+    
+    <script>
+        let caixaInputs = document.getElementsByTagName('input')    // será um array com 3 indices, um para cada um dos inputs (no caso, os botoes); em cada indice, cria indicies pra cada caracteristica do botao em questao; quando interferir nessa variavel, é mesmo esquema de ponteiro (altera na origem tambem)
+        let teste = caixaInputs
+        // pegar as informacoes do segundo input
+        console.log(caixaInputs[0].id)
+        console.log(caixaInputs[0].type)
+        console.log(caixaInputs[0].className)
+
+        // pega as informacoes do primeiro input
+        caixaInputs[1].style.backgroundColor="pink" //deixou rosa (CSS Declaration)
+        teste[1].style.backgroundColor="red"        // tornou o rosa em vermelho (ou seja, ambos conseguem acessar o mesmo elemento inicial)
+
+        // poderia ter mais de um h3, por isso ele retorna um array; neste caso, tem so um h3, entao é retornado um array de apennas um elemento
+        let cabeca3 = document.getElementsByTagName('h3')
+        console.log(cabeca3)
+        console.log(cabeca3[0].tagName)
+        console.log(cabeca3[0].innerText)
+        console.log(cabeca3[0].innerHTML)
+
+        // alterando os conteudos
+        caixaInputs[0].value = "Annita"
+        caixaInputs[1].value = "Pablo"
+
+        // cabeca3[0].innerText = "<em>Sexta</em>" nao interpreta a tag <em>
+        cabeca3[0].innerHTML = "<em>Sexta</em>"
+
+    </script>
+</body>
+</html>

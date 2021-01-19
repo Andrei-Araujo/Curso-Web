@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        let nota = 10;
+        if(nota == 10){
+            document.write("Parabéns, voce tirou a nota maxima");
+        }
+        document.write("<hr>");
+        ///////////////////////////////////////////////////////////////
+        nota = 8;
+        if(nota >=7){
+            document.write("Aprovado");
+        }else{
+            document.write("Reprovado");
+        }
+        document.write("<hr>");
+        /*
+        nota = 8;
+        if(nota >=7){
+            document.write("Aprovado");
+        }
+        if(nota<7){
+            document.write("Reprovado");
+        }
+        */
+        ////////////////////////////////////////////////////////////////////////////
+        nota = 4;
+        if(nota >= 7){
+            document.write("Aprovado");
+        }else if(nota >= 5){
+            document.write("Recuperacao");
+        }else{
+             document.write("Reprovado");
+        }
+        document.write("<hr>");
+         /*
+        nota = 8;
+        if(nota >=7){
+            document.write("Aprovado");
+        }
+
+        if(nota >=5 && nota < 7){
+            document.write("Recuperacao");
+        }
+
+        if(nota<5){
+            document.write("Reprovado");
+        }
+        */
+        ////////////////////////////////////////////////////////////////////////////
+        nota = 5;
+        let resp = (nota >=7)?("Aprovado"):("Reprovado");
+        document.write(resp);
+
+        document.write("<br>");
+            document.write((nota >=7)?("Aprovado"):("Reprovado"));
+        document.write("<br>");
+            document.write( nota >=7 ? "Aprovado" : "Reprovado" );    
+    </script>
+</body>
+</html>

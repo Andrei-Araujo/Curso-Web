@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="button" id="um" value="Oi" class="formata" style="color:red;font-family: Arial;">
+    <hr>
+    <input type="button" id="dois" value="Ui" class="formata">
+    <hr>
+    <input type="button" id="tres" value="Ai" >
+    <hr>
+    <p class="formata">Paragrafo 1</p>
+    <p>Paragrafo 2</p>
+    <p>Paragrafo 3</p>
+    
+    <hr>
+    <h3 class="formata"><em>Eu sou o h3</em></h3>
+    <script>
+        //retiornando class
+       
+        //se eu usar o document.querySelector('h3');
+        //retornará apenas o primeiro objeto que tiver a tag h3
+        let unico = document.querySelector('h3');
+        console.log(unico);
+        console.log(unico.tagName);
+        console.log(unico.className);
+        console.log(unico.innerHTML);
+        console.log(unico.innerText);
+        
+
+        console.log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx');
+        
+        //parar reornar todos os objetos com a tag h3 utilizar o 
+        //document.querySelectorALL('h3');
+        //similar ao document.getElementsByTagName('h3')
+        let todos = document.querySelectorAll('h3');
+        console.log(todos);
+        console.log(todos[0].tagName);//
+        console.log(todos[0].className);//
+        console.log(todos[0].innerHTML);//
+        console.log(todos[0].innerHTML);//
+
+        /**/
+        
+    </script>
+</body>
+</html>

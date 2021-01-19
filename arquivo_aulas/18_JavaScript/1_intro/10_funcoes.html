@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        function alerta(info){
+            document.write("Alertando "+info+"<hr>")
+        }
+        alerta('Vai chover!')
+
+        ///////////////////////////////////////////
+        // funcao nnonima atribuida a uma variavel ou a uma propriedade
+        const alerta2 = function(info){
+            document.write("Alertando "+info+"<hr>")
+        }
+
+        alerta2('Vai cair!')
+        //alerta2('Vai 2!')         apesar do alerta2 ser const, o info nao precisa ser (e no caso, nao é)
+        //console.log(alerta2)
+
+        ///////////////////////////////////////////
+        // arrow function atribuida a uma variavel ou a uma propriedade
+        // pessoal de react tem usado bastante
+        const alerta3 = (info)=>{
+            document.write("Alertando "+info+"<hr>")
+        }
+
+        alerta3('Vai cair!')
+    </script>
+</body>
+</html>

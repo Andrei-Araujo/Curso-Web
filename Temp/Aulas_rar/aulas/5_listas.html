@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- unorded list-->
+    <ul><!--type="disk" padrao e pode ser omitido => especificados: square e circle-->
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <!-- marcadores nao devem ser configurados através do atributo type="" - devem ser configurados a partir de CSS -->
+    <ul type="circle">
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <ul type="square">
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <hr />
+
+    <!-- orded list -->
+    <ol start="5"><!-- type="1" padrao e pode ser omitido-->
+        <li>Banana</li>
+        <li>Pera</li>
+        <li>Uva</li>
+        <li>Maçã</li>
+        <li>Melão</li>
+        <li>Pessego</li>
+    </ol>
+
+    <ol type="I" start="5"><!-- Pode ser caixa alta ou baixa type="i" ou type="I"-->
+        <li>Banana</li>
+        <li>Pera</li>
+        <li>Uva</li>
+        <li>Maçã</li>
+        <li>Melão</li>
+        <li>Pessego</li>
+    </ol>
+
+    <ol type="A"  start="5"><!-- Pode ser caixa alta ou baixa type="a" ou type="A"-->
+        <li>Banana</li>
+        <li>Pera</li>
+        <li>Uva</li>
+        <li>Maçã</li>
+        <li>Melão</li>
+        <li>Pessego</li>
+    </ol>
+
+    <hr>
+    <!-- XXXXXXXXXXXXXXXXX  Listas aninhadas => Listas com sub listas  XXXXXXXXXXXXXXXXXXXXXXXXX-->
+
+    <ol>
+        <li>Honda
+            <ol type="A">
+                <li>CRV
+                    <ol>
+                        <li>Alcool</li>
+                        <li>Gasolina</li>
+                    </ol>
+                </li>    
+                <li>HRV</li>
+                <li>WRV</li>
+                <li>FIT</li>
+            </ol>
+        </li>    
+        <li>Fiat</li>
+        <li>Renault</li>
+        <li>Suzuki</li>
+    </ol>
+
+    <ul>
+        <li>Honda
+            <ul>
+                <li>CRV
+                    <ul>
+                        <li>Alcool</li>
+                        <li>Gasolina</li>
+                    </ul>
+                </li>    
+                <li>HRV</li>
+                <li>WRV</li>
+                <li>FIT</li>
+            </ul>
+        </li>    
+        <li>Fiat</li>
+        <li>Renault</li>
+        <li>Suzuki</li>
+    </ul>
+</body>
+</html>

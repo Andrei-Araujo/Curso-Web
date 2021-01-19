@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        BOX MODEL
+        border: nao mostra e precisa ser especificado
+        Margin: distancia da borda para fora => para os pais (parent) ou irmaos (siblings)
+        padding: distancia da borda para dentro => para os filhos (tags) ou conteudo (content)
+        width:  display block: 100% do pai dele e pode ser alterado
+                display inline: adequar ao conteudo e nao pode ser alterado
+        height: display block: Adequa o conteudo e pode ser alterado
+                display inline: Adequa ao conteudo e NAO pode ser alterado
+
+        box-sizing: content-box => padrão => width será o tamanho do conteúdo
+            tamanho total da caixa: 5+20+700+20+5 => 750px pois width:700px foi para o conteudo
+                    border-box => width será o tamanho da caixa toda, contando a partir do lado externo da borda (portanto, INCLUI as bordas)
+                        5+20+20+5 = 50 width 700 - 50 = 650ox de content => conteudo terá o tamanho de 650px
+
+         */
+         p{
+             border:5px solid black;
+             padding:20px;
+             margin: 20px;
+             width: 700px;  /* o content (o texto) tem essa largura; ainda vai adicionar as outras coisas */
+
+             /* height: 50 px; */
+             /* display: inline */
+             text-align: justify;
+             box-sizing: border-box;
+             /* overflow: auto;  permite inserir um scroll para enxergar o conteudo que nao cabe nas dimensoes dadas; é util para quando definimos height*/
+             background-color: burlywood;
+             /* background-clip: border-box;   padrão vai ate parte externa da border; inclui border
+             background-clip: padding-box;  vai até a parte interna da borda; inclui padding */
+             background-clip: content-box;  /* vai ate o conteudo, sem pegar o padding; inclui content */
+         }
+         /* 
+         Seletor universal
+         Aplicará as propriedades definidas por ele em TODAS as caixas
+         {
+             margin: 0;
+             padding: 0;
+         }
+          */
+         ul#lista{  /* poderia colocar direto #lista */
+             background-color: chocolate;
+             border: 1px solid blue;
+             padding:0;
+         }
+         ul#lista li{   /* é valido para as li dentro da ul lista */
+             background-color: crimson;
+             border:1px solid black;
+
+             /* list-style-type: lower-latin; */
+             /* list-style-image: url('gifs pequeninos/anipencil.gif'); */
+             /* list-style-position: inside; */   /* o marcador fica dentro da caixa; padrao é outside, e pode sumir com os marcadores, dependendo do caso */ 
+             list-style-image: url('gifs pequeninos/anipencil.gif');
+             list-style-position: inside;
+         }
+
+         /*     FORMATAR TODOS OS MENUS */
+         nav {
+             background-color: lightgreen;
+         }
+         nav ul{
+            background-color: lightsalmon;
+            padding: 0;
+         }
+         nav li{
+            background-color: lightpink;
+            list-style-type: none;  /* para remover os circulos de topicos, que ficaria outside */
+            width:25%;
+            border: 3px solid black;
+         }
+         nav ul li a{   /* poderia usar nav a direto */
+            padding: 10px;
+            text-align: center;
+            display: block;
+         }
+
+         nav a:link, nav a:visited{
+             background-color: red;
+             color: black;
+             text-decoration: none;
+             font-family: Arial, Helvetica, sans-serif;
+             overflow:hidden;
+             transition: background-color 1s, color 1s, width 3s;
+         }
+         nav a:hover{   /* herdou das mudancas anteriores */
+            color: white;
+            background-color: black;
+         } 
+         nav a:active{  /* herdou as mudancas feitas pelo hover */
+            color: sienna;
+            background-color: white;
+            font-style: italic;
+            text-decoration: underline;
+         }
+         /*     FORMATAR O MENU HORIZONTAL */
+         nav#horizontal li{
+            float:left;
+            box-sizing: border-box;
+         }
+         /*     FORMATAR O MENU VERTICAL */
+         nav#vertical li{
+            width: 30px;
+            transition: width 1s;
+         }
+         nav#vertical li:hover{
+            width: 25%;
+         }
+    </style>
+</head>
+<body>
+    <!-- id e classe sao universais; podem ser atribuidos a quaisquer elementos; a partir de agora, usaremos CSS para formatar os elementos -->
+    <p id="dois" class="par">Quando alguém está em sua vida por uma "Razão"... é, geralmente, para suprir uma necessidade que você demonstrou. Elas vêm para auxiliá-lo numa dificuldade, te fornecer orientação e apoio, ajudá-lo física, emocional ou espiritualmente. Elas poderão parecer como uma dádiva de Deus, e são! Elas estão lá pela razão que você precisa que eles estejam lá. Então, sem nenhuma atitude errada de sua parte, ou em uma hora inconveniente, esta pessoa vai dizer ou fazer alguma coisa para levar essa relação a um fim. Ás vezes, essas pessoas morrem. Ás vezes, eles simplesmente se vão. Ás vezes, eles agem e te forçam a tomar uma posição. O que devemos entender é que nossas necessidades foram atendidas, nossos desejos preenchidos e o trabalho delas, feito. As suas orações foram atendidas. E agora é tempo de ir.</p>
+
+    <ul id="lista">    <!--  -->
+        <li>Pink</li>
+        <li>Red</li>
+        <li>Green</li>
+        <li>Blue</li>
+        <li>Yellow</li>
+    </ul>
+
+    <!--  -->
+ <nav id="vertical">    <!-- um menu -->
+    <ul >    
+        <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+        <li><a href="3_texto.html">Textos</a></li>
+        <li><a href="#" onclick="alert('oi')">Javascript</a></li> <!-- depois, não é para fazer assim; veremos o jeito correto -->
+        <li><a href="#">Quebrado</a></li>
+    </ul>
+ </nav>   
+    
+ <nav id="horizontal">    <!--  -->
+    <ul >    
+        <li><a href="http://www.uol.com.br" target="_blank">UOL</a></li>
+        <li><a href="3_texto.html">Textos</a></li>
+        <li><a href="#" onclick="alert('oi')">Javascript</a></li> <!--  -->
+        <li><a href="#">Quebrado</a></li>
+    </ul>
+ </nav>   
+    
+
+    
+</body>
+</html>

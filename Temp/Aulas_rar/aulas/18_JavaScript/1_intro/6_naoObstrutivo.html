@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formata{
+            color:brown;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <script>
+        function primeira()
+        {
+            var nome = prompt('Entre com seu nome');
+            alert("O nome é: "+nome);
+            console.log(nome);
+        }
+
+
+    /*
+    function segunda(){   
+        window.document.frm.info.value="Tchau!!!!!";  
+     } 
+     window.onload = segunda;
+    */
+    window.onload = function(){   
+        window.document.frm.info.value="Tchau!!!!!";  
+        let infoText = document.getElementById('quatro');
+        alert(infoText);//[object HTMLInputElement]
+        console.log(infoText);//<input type="text" id="quatro" name="info" value="oiiii">
+        alert(infoText.type);//text
+        infoText.type="password";
+        alert(infoText.type);//text
+     }
+
+    </script>
+</head>
+<body>
+<form name="frm" id="formulario">    
+    <input type="button" id="um" value="Click" onclick="primeira()">
+    <hr>
+    <input type="button" id="dois" value="DoubleClick" ondblclick="primeira()">
+    <hr>
+    <input type="button" id="tres" value="Mouse Over" onmouseover="">
+    <hr>
+    <input type="text" class="formata" id="quatro" name="info" value="oiiii">
+</form>
+</body>
+</html>

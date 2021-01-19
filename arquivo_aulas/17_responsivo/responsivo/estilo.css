@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+alvo - 960px
+contexto - tela - 1024
+alvo.contexto*100
+ */
+ 
+ /* MOBILE FIRST */
+ img{
+     width: 100%;
+     height: auto;  /* ja é o default */
+ }
+ header.header img{
+     max-width: 234px;
+ }
+ nav{
+     margin-bottom: 30px;
+ }
+ nav li{
+     list-style-type: none;
+     background-color: #54CDE2;
+     border: 1px solid #069;
+     text-align: center;
+     margin-bottom: 2px;
+     line-height: 30px; /* para definir um tamanho vertical para esses elementos */
+ }
+ nav li a,a{
+     color: #006;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: .94em;
+     text-decoration: none;
+     display: block;    /* para a parte do link ocpar o parent inteiro, e nao so seu conten (no caso, nao so a palavra do link) */
+ }
+ #coluna1,#coluna2,#coluna3,#coluna4{
+     width: 100%;
+     height: auto;
+     border: 1px solid gray;
+     box-sizing: border-box;
+     margin-bottom: 20px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+ p{
+     text-align: justify;
+     font-size: .8 em;
+     padding: 25px 1.52%;    /* top-bottom   left-right */
+ }
+ h1{
+     color: #006;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 1.15 em; /* aumenta em % em relacao ao padrao do dispositivo */
+ }
+ footer#rodape{
+     background-color: #3891c0;
+     line-height: 80px;
+ }
+ footer#rodape p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ /* break point */
+ @media only screen and (min-width:480px){  /* modo tablet */
+     nav li{
+         width: 25%;
+         float: left;
+         box-sizing: border-box;    /* com isso, o menu vertical se torna menu horizontal */
+     }
+     #coluna1,#coluna3{
+        width: 47%;
+        margin-right: 6%;
+        clear: both;    /* por segurança */
+        float: left;
+     }
+     #coluna3{
+         clear: both;
+     }
+     #coluna2,#coluna4{
+         width: 47%;
+         float: left;
+     }
+     footer#rodape{
+         clear: both;
+     }
+ }
+ @media only screen and (min-width:768px){  /* modo desktop */
+     #coluna2{
+         margin-right: 6%;
+         width: 20.5%;
+     }
+     #coluna3{
+        width: 20.5%;
+        clear: none;    /* limpa o clear; uma alternativa era clear:unset */
+     }
+     #coluna1,#coluna4{
+        width: 20.5%;
+     }
+     #container{    /* deixa-se o site inteiro dentro de uma div (um container) pois alguns browser nao encaram bem manipular em certas caracteristicas direto no body (pra esses browsers/ indexadores, body teria que ser completo) */
+         width:90%;
+         margin: auto:
+     }
+ }

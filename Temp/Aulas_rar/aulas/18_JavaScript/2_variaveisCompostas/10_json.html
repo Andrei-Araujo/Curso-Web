@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+   //let alunos = Array('paulo','Jose','Mané');
+    let alunos =['paulo','Jose','Mané'];//JSON - JavaScriptObjectNotation
+   document.write(alunos[1]);
+    document.write('<br>');
+    document.write(alunos[2]);
+
+    document.write('<hr>');
+    let alunos2 =[
+                    {nome:"Paulo",mesa:"10",cursos:['php','js']},
+                    {nome:"Jose",mesa:"30",cursos:['MysQL','jQUERY']},
+                    {nome:"Mané",mesa:"45",cursos:['aJAX','BOOTSTRAP']}
+                ];
+                
+    document.write(alunos2[1].cursos[0]);//MySql
+</script>
+<body>
+    
+</body>
+</html>
