@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<style>
+	#resposta{
+		border: 1px solid black
+	}
+</style>
 <script type="text/javascript" language="javascript">
 /*
 AJAX - ASYNCHRONUS JAVASCRIPT AND XML
@@ -18,38 +23,40 @@ sincrona - uma acao que eu disparo e espero o retorno dela para fazer outra cois
 
 Assincrono - disparo um link e continuo navegando na pagina, executando outras acoes(por debaixo dos panso)
 */
-
-					
+onload = function(){
+	document.getElementById('botao').addEventListener('click',function(){
+		let resp = document.getElementById('resposta')			
 				//implementacao do ajax
 				//criar o objeto XMLHttpRequest
 				//atraves dele faremos todas as nossas requisicoes
 				
-				
+				var ajax = new XMLHttpRequest()	// readystate vale 0
 				//propriedade do obj XMLHttpRequest - pega um tipo de resposta do servidor - uma alteracao de status na comunicacao cliente servidor
-				
+				ajax.onreadystatechange = function(){
 					//alert(ajax.readyState);
 						/*
 						ajax.readyState
 						0 - comunicacao nao iniciada
 						1 - inicio de comunicacao
-						2 - imicio de requisicao - algo foi encaminhado para o servidor
+						2 - inicio de requisicao - algo foi encaminhado para o servidor
 						3 - servidor em processo de envio de resposta
 						4 - servidor acaboude enviar a resposta da requisicao
 						*/
-						
-							//alert(ajax.status);
-							//alert(ajax.statusText);
-							//alert(ajax.responseText);
+						if(ajax.readyState == 4){
+							alert(ajax.status);			// 200
+							alert(ajax.statusText);		// ok
+							alert(ajax.responseText);	// 
 							//resp.innerHTML = ajax.responseText;
-							
-				
-				
+							resp.innerHTML += ajax.responseText;
+						}	
+					}
 				////////////////////////////////////////////////////////////////////////////////
-				//indica aoajax quais os dados de endereco de afrquivoque ele acessará no servidor
+				//indica ao ajax quais os dados de endereco de afrquivoque ele acessará no servidor
 				//dois parametros obrigatorios - metodo(GET e POST sao os mais populares) e url(valor relativo ou absoluto - no mesmoservidor)
 				//tres parametros opcionais - assincronia(padrao true) - usuario e senha
-				
+				ajax.open("GET","arquivo.txt", true)		// readystate = 1; ao inves de get, podia ser post; o arquivo solicitado sera arquivo.txt; será assincrona (true para assincronia)
 				//ajax.send(nome=edu&idade=54)
+				ajax.send()	// readystate = 2; open abre a requisicao, send envia os parametros de requisicao do open ao servidor
 				//respostas
 				//status - numero - 200 se ok - 404 nao encontrada
 				//alert(ajax.status);
@@ -63,7 +70,7 @@ Assincrono - disparo um link e continuo navegando na pagina, executando outras a
 				//responseXML= para carregamento de conteudo xml
 				//alert(ajax.responseXML);
 				
-		}	
+	})	
 }
 </script>
 </head>

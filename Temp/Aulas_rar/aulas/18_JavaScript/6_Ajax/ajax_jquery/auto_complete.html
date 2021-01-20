@@ -9,10 +9,12 @@
 <script src="jquery-ui.min.js"></script>
 <script>
 //Adicionabdo evento que será chamado quando a página estiver pronta
-  
-
-
-
+ $(document).ready(function(){
+    $('#carros').autocomplete({
+        source:"http://www.edupretel.com.br/html5_impacta/lista_carros.php",
+        minLength:2
+    });
+ }) 
 </script>
 </head>
 

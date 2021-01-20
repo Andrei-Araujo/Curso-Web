@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-<script type="text/javascript" language="javascript">
+<style>
+	#resposta{
+		border:1px solid black;
+	}
+</style>
 
-</script>
 </head>
 
 <body>
@@ -13,5 +16,32 @@
   <input type="button" name="botao" id="botao" value="Button">
 </div>
 <div id="resposta"></div>
+
+<script type="text/javascript" language="javascript">
+
+      document.getElementById('botao').addEventListener('click',function(){
+          let resp = document.getElementById('resposta');	
+              var ajax = new XMLHttpRequest();//readyState = 0
+              ajax.onreadystatechange = function(){
+                  if(ajax.readyState == 4){
+                    let conteudo = ajax.responseXML;
+                    let nome = conteudo.getElementsByTagName('nome')[0].firstChild.nodeValue;
+                    let curso1 = conteudo.getElementsByTagName('curso')[0].firstChild.nodeValue;
+                    //let curso2 = conteudo.getElementsByTagName('curso')[1].firstChild.nodeValue;
+                    
+                    resp.appendChild(document.createTextNode(nome));//dom core
+                    resp.appendChild(document.createElement('br'));//dom core
+                    resp.appendChild(document.createTextNode(curso1));//dom core
+                    resp.appendChild(document.createElement('br'));//dom core
+                    resp.appendChild(document.createTextNode(conteudo.getElementsByTagName('curso')[1].firstChild.nodeValue));//dom core
+                    resp.appendChild(document.createElement('br'));//dom core
+                    resp.appendChild(document.createTextNode('A novela tá chata'));//dom core
+                  }	
+              }		
+              ajax.open("GET","arquivo.xml",true);//readyState = 1
+              ajax.send();//readyState = 2			
+      })	
+
+  </script>
 </body>
 </html>

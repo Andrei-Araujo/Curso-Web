@@ -3,8 +3,29 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<style>
+	#resposta{
+		border:1px solid black;
+	}
+</style>
 <script type="text/javascript" language="javascript">
-
+window.onload=function(){
+    document.getElementById('botao').addEventListener('click',function(){
+        let resp = document.getElementById('resposta');	
+            var ajax = new XMLHttpRequest();//readyState = 0
+            ajax.onreadystatechange = function(){
+                if(ajax.readyState == 4){
+                  alert(ajax.status);//200
+                  alert(ajax.statusText);//ok
+                  alert(ajax.responseText);//
+                  //resp.innerHTML = ajax.responseText;
+                  resp.innerHTML += ajax.responseText;//resp.innerHTML = resp.innerHTML+ajax.responseText;
+                }	
+            }		
+            ajax.open("GET","arquivo.html",true);//readyState = 1
+            ajax.send();//readyState = 2			
+    })	
+}
 </script>
 </head>
 

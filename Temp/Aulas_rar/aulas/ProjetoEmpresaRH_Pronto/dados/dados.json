@@ -1,0 +1,54 @@
+{
+  "vagas": [
+    {
+      "id": 1,
+      "titulo": "Programador Java Pleno",
+      "tipo": "1"
+    },
+    {
+      "id": 2,
+      "titulo": "Analista Comercial",
+      "tipo": "2"
+    },
+    {
+      "id": 3,
+      "titulo": "Instrutor Excel Avançado",
+      "tipo": "1"
+    },
+    {
+      "id": 4,
+      "titulo": "Gerente de Projetos para .NET",
+      "tipo": "2"
+    },
+    {
+      "id": 5,
+      "titulo": "Consultor de Desenvolvimento Agil",
+      "tipo": "2"
+    },
+    {
+      "id": 6,
+      "titulo": "Programador VB.Net",
+      "tipo": "1"
+    }
+  ],
+  "candidatos": [
+    {
+      "nome": "Gervasio Cesar",
+      "data": "1990-03-22",
+      "sexo": "masculino",
+      "telefone": "3254-2200",
+      "email": "gervasio@impacta.com",
+      "vaga": "Instrutor Excel Avançado",
+      "id": 1
+    },
+    {
+      "nome": "Amanda Silva",
+      "data": "1990-02-01",
+      "sexo": "feminino",
+      "telefone": "3254-8300",
+      "email": "amanda@mail.com",
+      "vaga": "Consultor de Desenvolvimento Agil",
+      "id": 2
+    }
+  ]
+}

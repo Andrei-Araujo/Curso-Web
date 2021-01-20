@@ -3,33 +3,23 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
 <script type="text/javascript" language="javascript">
 
-window.onload = function(){
-
-		document.getElementById("botao").onclick = function(){
-		
-			var resp = document.getElementById("resposta");
-					
-				
-				var ajax = new XMLHttpRequest();
-				
-				
-				ajax.onreadystatechange = function(){
-					
-						if(ajax.readyState == 4){
-							
-							resp.innerHTML+= ajax.responseText;
-						}	
+$(document).ready(function(){	
+		$('#botao').click(function(){
+			var resp = $("#resposta");
+			$.ajax({
+				url: "arquivo.txt",
+				dataType: 'text',
+				success: function(retorno){
+					resp.text(retorno)
 				}
-				
-				
-				
-				ajax.open("POST","arquivo.txt",true);
-				ajax.send(null);//ajax.send(nome=edu&idade=54)
-				
-		}	
-}
+			})
+		})
+})	
 </script>
 </head>
 

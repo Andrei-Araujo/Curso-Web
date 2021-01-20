@@ -3,8 +3,30 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<style>
+	#resposta{
+		border: 1px solid black
+	}
+</style>
 <script type="text/javascript" language="javascript">
 
+onload = function(){
+	document.getElementById('botao').addEventListener('click',function(){
+		let resp = document.getElementById('resposta')			
+				var ajax = new XMLHttpRequest()	// readystate vale 0
+				ajax.onreadystatechange = function(){
+						if(ajax.readyState == 4){
+							alert(ajax.status);			// 200
+							alert(ajax.statusText);		// ok
+							alert(ajax.responseText);	// 
+							//resp.innerHTML = ajax.responseText;
+							resp.innerHTML += ajax.responseText;
+						}	
+					}
+				ajax.open("GET","arquivo.html", true)		// readystate = 1; ao inves de get, podia ser post; o arquivo solicitado sera arquivo.txt; será assincrona (true para assincronia)
+				ajax.send()	// readystate = 2; open abre a requisicao, send envia os parametros de requisicao do open ao servidor
+	})	
+}
 </script>
 </head>
 

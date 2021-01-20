@@ -8,11 +8,13 @@
 <script src="jquery.min.js"></script>
 <script src="jquery-ui.min.js"></script>
 <script>
-//Adicionabdo evento que será chamado quando a página estiver pronta
-  
-
-
-
+//Adicionando evento que será chamado quando a página estiver pronta
+    $(document).ready(function(){
+        $('#carros').autocomplete({ // esse autocomplete veio do jquery
+            source:"http://www.edupretel.com.br/html5_impacta/lista_carros.php" // o autocomplete nao funcionou justamente por tentar recorrer a uma url com host diferente do localhost (bloqueado por questao de seguranca do browser)
+            minLenght:2     // min de caracteres pra ativar o autocomplete
+        }) 
+    })
 </script>
 </head>
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Candidatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <div>
+        <h1>Registro de Candidatos</h1>
+        <form>
+<div class="container borda">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <canvas id="relogio"></canvas>
+        </div>
+        <div class="col-sm-6 text-center">
+            <div id="mensagemdb"></div>
+        </div>
+    </div>
+
+                
+
+                <div>
+                    <audio src="../audios/welcome.mp3" controls autoplay loop></audio>
+                </div>
+                <!-- Nome do candidato -->
+
+                <div class="form-group row">
+                    <label for="nome" class="col-sm-2 col-form-label">Nome:</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="nome" name="nome" required="required" autofocus="autofocus"
+                            class="form-control" />
+                    </div>
+                </div>
+
+                <!-- Data de Nascimento -->
+                <div class="form-group row">
+                    <label for="data" class="col-sm-2 col-form-label">Data Nascimento:</label>
+                    <div class="col-sm-5">
+                        <input type="date" id="data" name="data" required="required" class="form-control" />
+                    </div>
+                </div>
+
+                <!-- Sexo -->
+                <div class="form-group row">
+                    <label for="sexo" class="col-sm-2 col-form-label">Sexo:</label>
+                    <div class="col-sm-10">
+                        <fieldset>
+                            <legend>Sexo:</legend>
+                            <input type="radio" id="masculino" name="sexo" value="masculino">Masculino<br />
+                            <input type="radio" id="feminino" name="sexo" value="feminino">Feminino<br />
+
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!-- Telefone -->
+                <div class="form-group row">
+                    <label for="telefone" class="col-sm-2 col-form-label">Telefone:</label>
+                    <div class="col-sm-5">
+                        <input type="tel" id="telefone" name="telefone" required="required" class="form-control" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" id="email" name="email" required="required" class="form-control" />
+                    </div>
+                </div>
+
+                <!-- Lista de Vagas -->
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Tipo de vaga:</label>
+                    <div class="col-sm-5">
+                        <input type="radio" id="desenv" name="tipo" value="desenv" checked="checked">Desenvolvimento
+                        <input type="radio" id="negocio" name="tipo" value="negocio">Negócios
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="vaga" class="col-sm-2 col-form-label">Vaga desejada:</label>
+                    <div class="col-sm-5">
+                        <select name="vaga" id="vaga" class="form-control">
+                        </select>
+                    </div>
+                </div>
+
+<!-- Botão de comandos -->
+<div class="form-group row">
+    <div class="col-sm-5 col-sm-offset-2">
+        <input type="button" value="Incluir" id="incluirButton" 
+                class="btn btn-primary">
+        <input type="button" value="Enviar para o IndexedDb" 
+                id="incluirDbButton" class="btn btn-primary">
+    </div>
+</div>
+            </div>
+        </form>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="../scripts/validacao_registro.js"></script>
+    <script src="../scripts/listaVagas.js"></script>
+    <script src="../scripts/cadastro.js"></script>
+    <script src="../scripts/relogio.js"></script>
+    <script src="../scripts/database.js"></script>
+</body>
+</body>
+
+</html>

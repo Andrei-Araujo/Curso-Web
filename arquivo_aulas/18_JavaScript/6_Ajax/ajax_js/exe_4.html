@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-<script type="text/javascript" language="javascript">
+<style>
+	#resposta{
+		border: 1px solid black
+	}
+</style>
 
-</script>
 </head>
 
 <body>
@@ -13,5 +16,33 @@
   <input type="button" name="botao" id="botao" value="Button">
 </div>
 <div id="resposta"></div>
+
+<script type="text/javascript" language="javascript">
+
+
+    document.getElementById('botao').addEventListener('click',function(){
+      let resp = document.getElementById('resposta')			
+          var ajax = new XMLHttpRequest()	// readystate vale 0
+          ajax.onreadystatechange = function(){
+              if(ajax.readyState == 4){
+                //alert(ajax.responseText);
+                let alunos = JSON.parse(ajax.responseText);  // ao inves da eval retornar undefined (padrao), retornar null
+                
+                resp.innerHTML = alunos.dados[0].nome
+                resp.innerHTML += ' - '
+                resp.innerHTML += alunos.dados[0].idade
+                resp.innerHTML += '<br>'
+
+                resp.innerHTML += alunos.dados[1].nome
+                resp.innerHTML += ' - '
+                resp.innerHTML += alunos.dados[1].idade
+                resp.innerHTML += '<br>'
+              }	
+            }
+          ajax.open("GET","arquivo.json", true)		// readystate = 1; ao inves de get, podia ser post; o arquivo solicitado sera arquivo.txt; será assincrona (true para assincronia)
+          ajax.send()	// readystate = 2; open abre a requisicao, send envia os parametros de requisicao do open ao servidor
+    })	
+  
+  </script>
 </body>
 </html>
