@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        ISTO SERÁ TRANSFORMADO NUMA PROMISE NO ARQUIVO 5
+        */
+        function sucesso(){
+            console.log('Rolou!')
+        }
+        function erro(){
+            console.log('Não rolou!')
+        }
+
+        function somar(num1,num2){
+            let soma = num1 + num2
+            if(soma==70)
+                sucesso()
+            else
+                erro()
+        }
+
+        somar(35,35)
+    </script>
+</body>
+</html>

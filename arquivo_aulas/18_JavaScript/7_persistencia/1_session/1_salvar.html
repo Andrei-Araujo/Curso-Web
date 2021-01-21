@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="persistencia.js"></script>
-    <script>
-        
-    </script>
+    
 </head>
 <body>
     <input type="text" id="nome">
@@ -17,5 +15,11 @@
     <input type="button" id="apagar" value="Apagar!!!!!">
     <hr>
     <p id="mensagem">Mensagem</p>
+
+    <script>
+        document.querySelector('#salvar').addEventListener('click',salvarNome)  //salvarNome vai ser executada detro do assEventListener conforme  click do elemento #salvar; nao é salvarNome() ja com parenteses para nao executar logo de cara, e executar apenas quando o EventListener achar valido
+        document.querySelector('#ler').addEventListener('click',lerNome)  
+        document.querySelector('#apagar').addEventListener('click',apagarNome)  
+    </script>
 </body>
 </html>

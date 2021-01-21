@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* let promise1 = new Promise() */    // cria um objeto da classe Promise
+        /* let promise1 = new Promise((resolve,reject)=>{}) */
+        let promise1 = new Promise((resolve,reject)=>{
+            /* setTimeout(function(){},2000) */       // espera 2000 ms para executar essa funcao
+            setTimeout(()=>{
+                resolve('A promise 1 deu certo')    //daqui 2s, vai executar o resolve se deu certo
+            },2000)
+        })
+
+        /* promise1.then(function(){}) */
+        promise1.then((resultado)=>{
+            console.log(resultado)  //resultado recebe o conteudo da resolve da promise1
+        })
+
+    </script>
+</body>
+</html>

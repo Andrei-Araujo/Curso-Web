@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('A promise 1 deu certo')
+            },2000)
+        })
+        let promise2 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('Eu sou a promise 2') 
+            },2000)
+        })
+
+        /* promise1.then((resultado)=>{
+            console.log(resultado) 
+        }) */
+
+        /* promise2.then()     vai fazer se der certo 
+        promise2.catch()    vai fazer se der errado */
+        /* promise2.then().catch() */     // é tipo um try: tente isso, se der errado, executa o "plano B" (o catch)
+        /* promise2.then((resultado)=>{}).catch((error)=>{}) */
+        promise2.then((resultado)=>{
+            console.log("Resolvido: "+resultado)
+        }).catch((error)=>{
+            console.log("Rejeitado: "+error)
+        })
+
+    </script>
+</body>
+</html>
