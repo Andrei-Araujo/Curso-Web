@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // hoisting - procura todas as declarações de variáveis com "var" e executa antes de todo o resto
+        alert(a)
+
+        /* 
+        Uncaught ReferenceError: Cannot access 'a' brefore initialization
+        let a = "oi"
+        cosnt a = "Edu"
+        */
+        var a ="Impacta"    // como var, a variavel existe;apenas o conteudo dela que ainda nao está acessivel
+    </script>
+</body>
+</html>

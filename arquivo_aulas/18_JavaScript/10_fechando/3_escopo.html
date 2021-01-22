@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // escopo de variavel
+            // onde a variavel esta acessivel dentro do documento 
+        
+        // escopo global e as funcoes podem acessa-las
+        var nome = "Edu"
+        var idade = 60
+        document.write(nome+' - '+idade+'<br>')
+
+        ///////////////////////////////////////////////
+        document.write("<hr>")
+        function mostraNome(){
+            // escola tem escopo local e é cessada smente dentro da função
+            var escola = "Impacta"
+            var nome = "Mane"   // nome com escopo local
+            // idade é a unica com escopo global
+            alert(nome+' - '+idade+"<br>"+escola)
+        }
+        mostraNome()
+        ///////////////////////////////////////////////
+        document.write("<hr>")
+        document.write(nome +' - '+ idade + "<br>")
+        //document.write(nome +' - '+ idade + "<br>"+ escola) escola ta fora do escopo
+    </script>
+</body>
+</html>

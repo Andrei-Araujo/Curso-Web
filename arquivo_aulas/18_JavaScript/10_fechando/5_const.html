@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // para variavel simples, nao deixa trocar o conteudo
+        const nome = "Edu"
+        alert(nome)
+        //nome = "Maria"
+        //alert(nome)
+        
+        const pessoa = {"nome":"Eduardo", "idade":60}   // para variavel composta, nao permite trocar as propriedades, mas permite trocar o conteudo dessas propriedades
+
+        document.write(pessoa.nome)
+        pessoa.nome = "Mane"            // permite a troca
+        document.write(pessoa.nome)
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         objeto é um TIPO de variavel composta criada a partir de uma classe 
+              guardo nela uma coleção de informações
+
+        Array - variavel composta
+         */
+         var alunos = ["Gabi", "Tais", "Andrei", "Leonardo"]
+         document.write(alunos[0])
+         document.write("<br>")
+         document.write(alunos[2])
+         document.write("<br>")
+         let alunosString = alunos.toString()
+         document.write(alunosString)
+         document.write("<br>")
+         document.write(alunosString.length)
+         document.write("<br>")
+
+         var pessoas = new Array("Gabi", "Tais", "Andrei", "Leonardo")
+         document.write(alunos[0])
+         document.write("<br>")
+         document.write(alunos[2])
+         document.write("<br>")
+         let pessoasString = pessoas.toString()
+         document.write(pessoasString)
+         document.write("<br>")
+         document.write(pessoasString.length)
+         document.write("<hr>")
+
+        //////////////////////////////////////////////////////////////
+        nome  = "Eduardo"
+        prof = new String('Eduardo')
+        document.write(nome.length)
+        document.write(prof.length)
+        document.write("<br>")
+        document.write(nome.substring(0,3))
+        document.write(prof.substring(0,3))
+        /* 
+        Nao precisa ser instanciado
+        Array
+        String
+        Number
+        Boolean
+         */
+
+        document.write("<hr>")
+        //////////////////////////////////////////////////////////////
+        hoje = new Date     // obrigado a instanciar antes de usar
+        outroDia = new Date(2018, 11, 24, 10, 33, 30, 0)
+        document.write(outroDia)
+        outroDia.setFullYear(2020)
+        document.write("<br>")
+        document.write(outroDia)
+        document.write("<hr>")
+        /* 
+        Precisa ser instanciado
+        XMLHTTPRequest
+        Date
+        Promises
+        Regexp
+         */
+
+        //////////////////////////////////////////////////////////////
+        document.write(Math.round(4.7))
+        document.write(Math.round(4.4))
+        document.write("<hr>")
+        
+        //////////////////////////////////////////////////////////////
+        var pessoas2 = JSON.stringify(pessoas)
+        document.write(pessoas2)
+        document.write("<hr>")
+    </script>
+</body>
+</html>

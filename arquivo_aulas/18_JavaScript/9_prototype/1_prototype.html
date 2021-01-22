@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      Date.prototype.cumprimento = "ooi"
+      Date.prototype.getdiaSemana = function(){
+          let dia = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado']
+          return(dia[this.getDay()])
+      }
+      
+      let data = new Date
+      document.write(data.getFullYear())
+      document.write(data.cumprimento)
+
+      document.write("<hr>")
+      document.write(data.getdiaSemana())
+    </script>
+</body>
+</html>
