@@ -24,6 +24,9 @@
   /*border: 1px solid black;*/
   margin-bottom: 1em;
   float: left;
+  display: none;
+  /*visibility: hidden;
+  transition: visibility 1.5s linear;*/
 }
 
 #logo img {
@@ -229,6 +232,9 @@ p {
     margin-left: 5%;
   }
   #div_receita {
-    display: block;
+    display: none;
+  }
+  .openbtn {
+    float: right;
   }
 }

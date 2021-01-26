@@ -13,10 +13,11 @@
             src="media/logo.png"
             id="logo_img"
         >
-        <img
+        <a onclick="showMenu()" id="btn_menu"><img
             src="media/burger.png"
             id="menu_img"
-        >
+        ></a>
+
     </div>
     <div id="logo2">
         <ul>
@@ -29,6 +30,11 @@
                 >About</a></li>
         </ul>
     </div>
+    <button
+        id="openbtn"
+        class="openbtn"
+        onclick="openReceita()"
+    >Abrir Receita</button>
     <div id="div_receita">
         <p>Receita</p>
         <p>Quantidade de pedaços <input
@@ -48,6 +54,10 @@
             <li class="receita">Pré-aquecer o forno a 123 graus por 10 minutos</li>
             <li class="receita">Separar a clara da gema</li>
         </ul></p>
+        <button
+            class="closebtn"
+            onclick="closeReceita()"
+        >Fechar Receita</button>
     </div>
     <div id="div_art">
 

@@ -9,3 +9,26 @@ onload = function(){
             paragrafo.innerHTML = a + " ovos" + "<br />" + b+" xicaras de leite" + "<br />" + c + " tangerinas"
         })
 }
+
+function openReceita(){
+    document.getElementById("div_receita").style.display="block"
+    document.getElementById("div_receita").style.marginRight="0%"
+    document.getElementById("div_receita").style.width="20%"
+    document.getElementById("openbtn").style.display="none"
+}
+
+function closeReceita(){
+    document.getElementById("div_receita").style.display="none"
+    document.getElementById("openbtn").style.display="block"
+}
+
+function showMenu(){
+    if(document.getElementById("logo2").style.display=="block"){
+        document.getElementById("logo2").style.display="none"
+        /*document.getElementById("logo2").style.visibility="hidden"*/
+    }else{
+        document.getElementById("logo2").style.display="block"
+        /*document.getElementById("logo2").style.visibility="visible"*/
+    }
+
+}
