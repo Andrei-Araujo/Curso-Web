@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        function blabla(resolve,reject){
+            //setTimeout(function(){},2000);
+            //setTimeout(()=>{},2000);
+            setTimeout(()=>{
+                resolve('A promise 1 deu certo');
+            },2000);
+        
+        }
+        let promise1 = new Promise(blabla);
+
+        */ 
+       
+        //let promise1 = new Promise();
+        //let promise1 = new Promise(function(resolve,reject){});
+        //let promise1 = new Promise((resolve,reject)=>{});
+        let promise1 = new Promise((resolve,reject)=>{
+            //setTimeout(function(){},2000);
+            //setTimeout(()=>{},2000);
+            setTimeout(()=>{
+                resolve('A promise 1 deu certo');
+            },2000);
+        });
+
+        //promise1.then(function(){})
+        promise1.then((resultado)=>{
+                console.log(resultado);
+        })
+    </script>
+</body>
+</html>

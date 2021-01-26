@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let promise1 = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve('A promise 1 deu certo');
+            },2000);
+        });
+        let promise2 = new Promise((resolve,reject)=>{
+             setTimeout(()=>{
+                 /* alternar entre reject e resolve e ver o resultado */
+                 resolve('Eu sou a promise 2');
+                //reject('Eu sou a promise 2');
+            },2000);
+        })
+        /*
+        promise1.then((resultado)=>{
+                console.log(resultado);
+        })
+        */ 
+       
+       //promise2.then()
+       //promise.catch()
+        //promise2.then().catch();
+        //promise2.then((resultado)=>{}).catch((error)=>{});
+        promise2.then((resultado)=>{
+                console.log("Resolvido: "+resultado);
+        }).catch((error)=>{
+                console.log("Rejeitado: "+error);
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circulo{
+            width: 100px;
+            height:100px;
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <svg id="circulo" >
+        <circle cx="50" cy="50" r="40"
+        stroke="black" stroke-width="5" fill="red" />
+      Sorry, your browser does not support inline SVG.
+      </svg>
+    <hr>
+    <svg width="400" height="100" style=" border:1px solid black;">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+        <ellipse  cx="150" cy="50" rx="80" ry="40"
+        stroke="black" stroke-width="5" fill="url(#grad1)" />
+        <text fill="#ffffff" font-size="45" font-family="Verdana" x="100" y="60">SVG</text>
+      </svg>
+
+    <hr>
+      <svg width="400" height="100">
+        <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+      </svg> 
+
+</body>
+</html>

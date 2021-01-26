@@ -1,10 +1,14 @@
 ﻿function init() {
     clock();
     setInterval(clock, 1000);
-}
+} 
 
 function clock() {
     var now = new Date();
+    /*
+    var canvas = document.getElementById('relogio');
+    var ctx = canvas.getContext('2d');
+    */
     var ctx = document.getElementById('relogio').getContext('2d');
     ctx.save();
     ctx.clearRect(0, 0, 150, 150);

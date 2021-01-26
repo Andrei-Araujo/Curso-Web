@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //objeto é um TIPO de variavel composta
+        //guardo nela uma coleção de informações
+        //criada a partir de uma class
+
+        //Array - variavell composta
+        var alunos = ["Gabi","Tais","Andrei","Leonardo","Mane"];
+        document.write(alunos[0]);
+        document.write("<br>");
+        document.write(alunos[2]);
+        document.write("<br>");
+        let alunosString = alunos.toString();
+        document.write(alunosString);
+        document.write("<br>");
+         document.write(alunos.length);
+        document.write("<hr>");
+
+
+        var pessoas = new Array("Gabi","Tais","Andrei","Leonardo");
+        document.write(pessoas[0]);
+        document.write("<br>");
+        document.write(pessoas[2]);
+        document.write("<br>");
+        let pessoasString = alunos.toString();
+        document.write(pessoasString);
+        document.write("<br>");
+        document.write(pessoas.length);
+        document.write("<hr>");
+
+        ////////////////////////////////////////////////////////////
+        nome = "Eduardo";
+        prof = new String('Eduardo');
+        document.write(nome.length);
+        document.write(prof.length);
+        document.write("<br>");
+        document.write(nome.substring(0, 3));
+        document.write(prof.substring(0, 3));
+         /*
+         Array
+         String 
+         Number
+         Boolean
+         */
+        document.write("<hr>");
+        ///////////////////////////////////////////////////////
+        hoje = new Date;
+        outroDia =new Date(2018, 11, 24, 10, 33, 30, 0);
+        document.write(outroDia);
+        outroDia.setFullYear(2020);
+        document.write("<br>");
+        document.write(outroDia);
+        document.write("<hr>");
+        /*
+            XMLHTTPRequest
+            Date
+            Promises
+            Regexp
+        */
+        //////////////////////////////////////////////////////////
+        document.write(Math.round(4.7));    // returns 5
+        document.write(Math.round(4.4));    // returns 4
+        document.write("<hr>");
+        ///////////////////////////////////////////////////////
+        var pessoas2 = JSON.stringify(pessoas);
+        document.write(pessoas2);
+        
+
+
+    </script>
+</body>
+</html>

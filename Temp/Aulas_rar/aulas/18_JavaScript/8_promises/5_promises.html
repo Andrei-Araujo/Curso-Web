@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ISTO É O EXERCICIO DA PAGINA 4  TRANSFORMADO NUMA PROMISE 
+        */
+
+
+        let somar = new Promise((resolve,reject)=>{
+            num1 = 35;
+            num2 = 35;
+            let soma = num1+num2;
+
+            if(soma == 70){
+                resolve('Rolou!!!!!!!');
+            }else{
+                reject('Não Rolou!!!!!!!');
+            }
+        });
+
+        somar.then((mensagem)=>{
+            console.log(mensagem);
+        }).catch((erro)=>{
+            console.log(erro);
+        });
+    </script>
+</body>
+</html>

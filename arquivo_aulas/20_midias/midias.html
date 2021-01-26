@@ -3,49 +3,108 @@
 <head>
    <title>Mídias</title>
    <meta charset="utf-8">
-   
- 
- 
-<style type="text/css">   
-  
- 
+
+
+
+<style type="text/css">
+
+   @font-face{
+      font-family: ilhabela;
+      src: url('FONTFACE/Akronim-Regular.ttf') format('truetype');
+   }
+
+   .especial{
+      font-family: Arial, Helvetica, sans-serif;
+   }
+
+   .fonteExterna{
+      font-family: ilhabela;
+   }
+   /*.roboto{
+      font-family: 'Roboto', sans-serif;
+   }*/   /* falta adicinar o src para ele */
 </style>
+
 </head>
 
 <body>
 <h2 class="especial">Mídias</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, luctus fringilla lacinia id, posuere vel purus. Donec faucibus mollis ex vulputate pretium. Nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, luctus fringilla lacinia id, posuere vel purus. Donec faucibus mollis ex vulputate pretium. Nulla.</p>
+<p class="fonteExterna">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, luctus fringilla lacinia id, posuere vel purus. Donec faucibus mollis ex vulputate pretium. Nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, luctus fringilla lacinia id, posuere vel purus. Donec faucibus mollis ex vulputate pretium. Nulla.</p>
 
 <h2 class="especial">Mapa</h2>
-
+<iframe
+   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d414895.2111496369!2d139.46068054017593!3d35.667919120148376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b857628235d%3A0xcdd8aef709a2b520!2zVMOzcXVpbywgSmFww6Nv!5e0!3m2!1spt-BR!2sbr!4v1611662254060!5m2!1spt-BR!2sbr"
+   width="400"
+   height="300"
+   frameborder="0"
+   style="border:0;"
+   allowfullscreen=""
+   aria-hidden="false"
+   tabindex="0"
+></iframe>
 <p>
 
 
 </p>
 
 <h2 class="especial">Vídeo HTML5</h2>
-
+   <video controls loop autoplay>   <!-- loop faz o video reproduzir em loop; meu browser ta (felizmente) travando o autoplay -->
+      <source src="Video/video.mp4" type="video/mp4">
+      <source
+         src="Video/video.mp4"
+         type="video/ogv"
+      >
+      <source
+         src="Video/video.mp4"
+         type="video/webm"
+      >
+   </video>
 
 
 <h2 class="especial">Audio</h2>
 
-
-
+<audio controls >
+   <source src="AUDIO/Fifth.mp3" type="audio/mp3">
+</audio>
+<hr>
+<!-- tirei os controls -->
+<button id="tocar">Tocar</button><button id="parar">Pausar</button>
+<audio id="som">
+   <source
+      src="AUDIO/jessie.mp3"
+      type="audio/mp3"
+   >
+</audio>
+<hr>
 <h2 class="especial">Vídeo Youtube</h2>
-
+<iframe
+   width="560"
+   height="315"
+   src="https://www.youtube.com/embed/AbyqXJMqAuw"
+   frameborder="0"
+   allow="accelerometer; <!--autoplay;--> clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+   allowfullscreen
+></iframe>
 <p>
 
 </p>
 
 
+<hr>
+<iframe src="https://impacta.com.br" width="500" height="500"></iframe>
 
 
 
 
-
-
-
+<script>
+   document.querySelector('#tocar').addEventListener('click',function(){
+      document.querySelector('#som').play()
+   })
+   document.querySelector('#parar').addEventListener('click', function () {
+         document.querySelector('#som').pause()
+      })
+</script>
 </body>
 
 </html>
