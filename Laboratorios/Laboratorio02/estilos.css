@@ -1,0 +1,48 @@
+body {
+  background: #ffafbd; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffc3a0,
+    #ffafbd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffc3a0,
+    #ffafbd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+fieldset {
+  width: 500px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+legend {
+  font-size: larger;
+}
+#cpf,
+#nome,
+#dataNasc,
+#tel,
+#email {
+  width: 25%;
+}
+.Enunciado {
+  /*border: 1px solid black;*/
+  display: inline-block;
+  width: 40%;
+  margin: 3px 0 3px 0;
+}
+#male {
+  margin-left: 25px;
+}
+#fi_exp label {
+  display: block;
+}
+#fi_exp textarea {
+  margin: 10px 0 3px 0;
+  width: 100%;
+}
+#submit {
+  display: inline-block;
+  float: right;
+}

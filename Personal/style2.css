@@ -1,0 +1,50 @@
+#logo,
+#logo2 {
+  background-color: pink;
+  /*height: 80px;*/
+  width: 100%;
+  /*border: 5px solid black;*/
+  display: inline-block;
+  position: static;
+}
+#logo_img {
+  float: left;
+  position: static;
+}
+#menu_img {
+  float: right;
+  max-height: 100%;
+}
+#logo2 {
+  background-color: rgb(206, 157, 166);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(160, 121, 127);
+}
+li {
+  text-align: center;
+  width: 100%;
+  /*display: block;*/
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 701px) {
+  li a {
+    display: block;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+}

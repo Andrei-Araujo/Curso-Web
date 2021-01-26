@@ -1,0 +1,239 @@
+body {
+  box-sizing: border-box;
+  margin: 0.25em 0.5em 0 0.5em;
+  padding: 0;
+}
+#logo {
+  background-color: pink;
+  /*height: 80px;*/
+  width: 100%;
+  /*border: 5px solid black;*/
+  display: inline-block;
+  position: static;
+}
+
+#logo_img {
+  float: left;
+  position: static;
+}
+#menu_img {
+  float: right;
+  max-height: 100%;
+  margin-right: 1em;
+}
+
+#logo2 {
+  background-color: pink;
+  /*height: 40px;*/
+  width: 100%;
+  /*border: 1px solid black;*/
+  margin-bottom: 1em;
+  float: left;
+}
+
+#logo img {
+  /*border: 1px solid blue;*/
+  margin-left: 0.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  max-width: 100%;
+  max-height: 60px;
+  display: inline-block;
+}
+#menu_img {
+  position: relative;
+  float: right;
+  /*border: 10px solid brown;*/
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(160, 121, 127);
+}
+
+li {
+  text-align: center;
+  width: 100%;
+  /*display: block;*/
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(54, 54, 54, 0.644);
+}
+
+.active {
+  background-color: #af844c;
+}
+
+#div_space {
+  height: 10em;
+}
+
+#img_01 {
+  float: left;
+  /*background-position: center;*/
+  margin: auto;
+  width: 100%;
+}
+
+.tag_comida {
+  /*clear: both;*/
+  /*float: left;*/
+  /*margin-left: 0em;*/
+  color: rgb(246, 38, 73);
+  font-size: 1.1em;
+  width: 10%;
+  /*margin-left: 50%;
+  margin-right: 50%;*/
+  margin: 0 45% 0 45%;
+  /*text-align: center;*/
+}
+
+h1 {
+  /*margin: 5px 0 0 0px;*/
+  clear: both;
+  /*float: left;*/
+
+  text-align: center;
+}
+
+p {
+  /*clear: both;*/
+  /*float: left;*/
+  text-align: center;
+}
+
+@media only screen and (min-width: 701px) {
+  #logo {
+    background-color: pink;
+    /*background-color: blue;*/
+    /*height: 80px;*/
+    width: 100%;
+    /*border: 5px solid black;*/
+    display: inline-block;
+    position: static;
+    float: left;
+  }
+
+  #logo_img {
+    float: left;
+    position: static;
+  }
+  #menu_img {
+    float: right;
+    max-height: 80%;
+  }
+
+  #logo2 {
+    display: flex;
+    background-color: pink;
+
+    /*height: 40px;*/
+    /*width: 30%;*/
+    /*border: 1px solid black;*/
+    position: static;
+    display: inline-block;
+    /*float: left;
+    box-sizing: border-box;*/
+  }
+
+  #logo img {
+    /*border: 1px solid blue;*/
+    max-width: 100%;
+    max-height: 80px;
+    display: inline-block;
+  }
+  #menu_img {
+    position: relative;
+    float: right;
+    /*border: 10px solid brown;*/
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(160, 121, 127);
+    /*width: 20%;*/
+  }
+
+  li {
+    float: left;
+    text-align: center;
+    width: auto;
+    /*display: block;*/
+    width: 20%;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: rgba(54, 54, 54, 0.644);
+  }
+
+  .active {
+    background-color: #af844c;
+  }
+
+  #div_space {
+    height: 10em;
+  }
+
+  article {
+    margin-left: 20px;
+    float: left;
+    position: static;
+    /*width: 100%;*/
+  }
+
+  #img_01 {
+    float: left;
+    /*background-position: center;
+    margin: auto;*/
+    width: 40%;
+  }
+
+  .tag_comida {
+    clear: both;
+    float: left;
+    margin-left: 0%;
+
+    color: rgb(246, 38, 73);
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  h1 {
+    text-align: left;
+    clear: both;
+    /*float: left;*/
+  }
+
+  p {
+    width: 60%;
+    text-align: left;
+    /*clear: both;*/
+    /*float: left;*/
+  }
+  #div_art {
+    margin-left: 5%;
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="estilos.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>
+            Registro de Curriculo
+        </h1>
+        <fieldset id="fi_dados">
+            <legend>Dados Pessoais</legend>
+            <div id="div_cpf">
+                <label class="Enunciado">Digite seu CPF: </label>
+                <input
+                    type="text"
+                    id="cpf"
+                    name="cpf"
+                    placeholder="123.456.789-12"
+                    pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+                    required="required"
+                    autofocus="autofocus"
+                >
+            </div>
+            <div id="div_nome">
+                <label class="Enunciado">Insira seu nome: </label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required="required"
+                    placeholder="Ate 10 caracteres"
+                    pattern="[A-z\s]{1,10}"
+                    //maxlength="5"
+                >
+            </div>
+            <div id="div_dataNasc">
+                <label class="Enunciado">Insira sua data de nascimento: </label>
+                <input
+                    type="date"
+                    id="dataNasc"
+                    name="dataNasc"
+                    required="required"
+                >
+            </div>
+            <div id="div_sexo">
+                <label class="Enunciado">Sexo: </label>
+                <div class="sexo2">
+                    <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="male"
+                        required="required"
+                    >
+                    <label for="female">Masculino</label>
+                    <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="female"
+                        required="required"
+                    >
+                    <label for="female">Feminino</label>
+                </div>
+            </div>
+            <div id="div_tel">
+                <label class="Enunciado">Digite seu telefone: </label>
+                <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="xx91234-5678"
+                    required="required"
+                    pattern="[0-9]{2}[0-9]{1}[0-9]{4}-[0-9]{4}"
+                >
+            </div>
+            <div id="div_email">
+                <label class="Enunciado">Digite seu e-mail: </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="email@email.com"
+                    required="required"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                >
+            </div>
+            <div id="div_image">
+                <label class="Enunciado">Insira sua Foto: </label>
+                <input
+                    type="file"
+                    accept="image/*"
+                />
+            </div>
+        </fieldset>
+        <fieldset id="fi_endereco">
+            <legend>Endereço</legend>
+            <div>
+                <label class="Enunciado">Insira sua Rua: </label>
+                <input
+                    type="text"
+                    id="rua"
+                    name="rua"
+                    required="required"
+                    placeholder="Avenida Paulista"
+                >
+                <label class="Enunciado">Número: </label>
+                <input
+                    type="text"
+                    id="numero"
+                    name="numero"
+                    required="required"
+                    placeholder="81"
+                >
+            </div>
+            <label class="Enunciado">Complemento: </label>
+            <input
+                type="text"
+                id="complemento"
+                name="complemento"
+                //required="required"
+                placeholder="Apto. 12A"
+            >
+            <label class="Enunciado">Bairro: </label>
+            <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                required="required"
+                placeholder="Vila Mariana"
+            >
+            <label class="Enunciado">Cidade: </label>
+            <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                required="required"
+                placeholder="São Paulo"
+            >
+            <label class="Enunciado">Estado: </label>
+            <input
+                type="text"
+                id="estado"
+                name="estado"
+                required="required"
+                placeholder="São Paulo"
+            >
+            <label class="Enunciado">CEP: </label>
+            <input
+                type="text"
+                id="cep"
+                name="cep"
+                required="required"
+                placeholder="01234-123"
+                pattern="[0-9]{5}-[0-9]{3}"
+            >
+        </fieldset>
+        <fieldset id="fi_exp">
+            <legend>Experiência profissional</legend>
+            <label>Conte sobre sua esperiência profissional</label>
+            <textarea id="exp" name="exp" rows="4">Fale sobre sua experência profissional</textarea>
+        </fieldset>
+        <fieldset id="fi_pretensao">
+            <legend>Pretensões</legend>
+            <label>Cargo pretendido:</label>
+            <select
+                id="cargo"
+                name="cargo"
+            >
+                <option value="cargo1">Cargo 1</option>
+                <option value="cargo2">Cargo 2</option>
+                <option value="cargo3">Cargo 3</option>
+                <option value="cargo4">Cargo 4</option>
+            </select>
+            <label>Salário pretendido:</label>
+            <input
+                type="text"
+                id="salario"
+                name="salario"
+                required="required"
+                placeholder="ex.: 3210"
+            >
+        </fieldset>
+        <div id="botoes">
+            <input
+                type="submit"
+                value="Submit"
+            >
+            <input
+                type="Reset"
+                value="Reset"
+            >
+        </div>
+    </div>
+</body>
+</html>
