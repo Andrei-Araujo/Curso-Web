@@ -1,96 +1,97 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: Verdana,Arial;
-    font-size: 10px;
-    background-color: #CCC; /* RGB, ao inves de hexadecimalquando é par de letras iguais, pode colocar so uma delas */
+body {
+  font-family: Verdana, Arial;
+  font-size: 10px;
+  background-color: #ccc; /* RGB, ao inves de hexadecimalquando é par de letras iguais, pode colocar so uma delas */
 }
 
-#interface{
-    border: 1px solid black;
-    background-color: burlywood;
-    width: 768px;
-    margin:auto;
-    position: relative; /* para o position do aside funcionar ocmo deveria */
+#interface {
+  border: 1px solid black;
+  background-color: burlywood;
+  width: 768px;
+  margin: auto;
+  position: relative; /* para o position do aside funcionar como deveria */
 }
 
-header#cabecalho{
-    height: 80px;
-    background-image: url(images/topo_.jpg);    /* Ctrl+barra para aparecerem sugestoes de arquivos */
+header#cabecalho {
+  height: 80px;
+  background-image: url(images/topo_.jpg); /* Ctrl+barra para aparecerem sugestoes de arquivos */
 }
 
-nav li{
-    list-style-type: none;
+nav li {
+  list-style-type: none;
 }
 
-nav#menu{
-    width: 150px;
-    height: 400px;
-    background-color: #000000;
-    float: left;
+nav#menu {
+  width: 150px;
+  height: 400px;
+  background-color: #000000;
+  float: left;
 }
 
-nav#menu ul li a{   /* nao precisa fazer o caminho completo */
-    margin: 1px;
-    padding: 5px;
-    border-left: 3px solid #FF0000;
-    border-bottom: 1px solid #CCCCCC;
-    display: block;
-    background-color: #000;
+nav#menu ul li a {
+  /* nao precisa fazer o caminho completo */
+  margin: 1px;
+  padding: 5px;
+  border-left: 3px solid #ff0000;
+  border-bottom: 1px solid #cccccc;
+  display: block;
+  background-color: #000;
 
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
-nav#menu a:hover{
-    text-decoration: underline;
-    border-left: 3px solid #FFFFFF;
-    background-color: #CCC;
-    color: black;
+nav#menu a:hover {
+  text-decoration: underline;
+  border-left: 3px solid #ffffff;
+  background-color: #ccc;
+  color: black;
 }
 
-section#principal{
-    background-color: #FFFFFF;
-    width: 618px;
-    height: 400px;
-    float:right;
-    position: relative; /* para o position do aside funcionar como deveria */
+section#principal {
+  background-color: #ffffff;
+  width: 618px;
+  height: 400px;
+  float: right;
+  position: relative; /* para o position do aside funcionar como deveria */
 }
 
-section#principal aside{
-    background-color: #CCC;
-    width: 150px;
-    position: absolute; /* o position do parent dele tem que ser qqr coisa que nao seja static (default) */
-    top:0;
-    right:0;
+section#principal aside {
+  background-color: #ccc;
+  width: 150px;
+  position: absolute; /* o position do parent dele tem que ser qqr coisa que nao seja static (default) */
+  top: 0;
+  right: 0;
 }
 
-section#principal aside a{
-    display: block;
-    padding: 10px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #FFF #333 #333 #333;
+section#principal aside a {
+  display: block;
+  padding: 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff #333 #333 #333;
 
-    font-size: 0.8em;   /* 80% da fonte padrao do dispositivo; para fonte, troca-se % por em */
-    color: black;
-    text-align: center;
-    text-decoration: none;
+  font-size: 0.8em; /* 80% da fonte padrao do dispositivo; para fonte, troca-se % por em */
+  color: black;
+  text-align: center;
+  text-decoration: none;
 }
 
-section#principal aside a:hover{
-    text-decoration: underline;
+section#principal aside a:hover {
+  text-decoration: underline;
 }
 
-footer#rodape{
-    background-color: #600;
-    color: #FFF;
-    text-align: center;
-    height: 50px;
-    width: 768px;
-    display: table-cell;    /* faz o objeto se comportar como uma celula de tabela (util para allign vertical) */
-    vertical-align: middle;
+footer#rodape {
+  background-color: #600;
+  color: #fff;
+  text-align: center;
+  height: 50px;
+  width: 768px;
+  display: table-cell; /* faz o objeto se comportar como uma celula de tabela (util para allign vertical) */
+  vertical-align: middle;
 }
